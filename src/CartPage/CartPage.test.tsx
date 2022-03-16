@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
 
-import { App } from './App'
+import { CartPage } from './CartPage'
 
 test('renders learn react link', () => {
-	render(<App />)
+	render(<CartPage />)
 	const linkElement = screen.getByText(/shopping cart/i)
 	expect(linkElement).toBeInTheDocument()
 })

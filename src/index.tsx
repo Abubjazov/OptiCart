@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { App } from './App'
+import { CartPage } from './CartPage/CartPage'
 
-import './index.css'
+import './index.scss'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<CartPage />
 	</React.StrictMode>,
 	document.getElementById('root')
 )
