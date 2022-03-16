@@ -1,3 +1,3 @@
 import './Header.scss'
 
-export const Header = () => <div className='header'>Header</div>
+export const Header = () => <header className='header'>Header</header>
