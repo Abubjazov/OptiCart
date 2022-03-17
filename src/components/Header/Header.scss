@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.header {
+	background: #fff;
+
+	h1 {
+		font-size: 31px;
+		font-weight: 300;
+		padding: 40px 0;
+		position: relative;
+
+		span {
+			color: #53b5aa;
+		}
+
+		.last-span {
+			background: #fff;
+			padding-right: 150px;
+			position: absolute;
+			left: 155px;
+			transition: all 0.3s linear;
+		}
+
+		&:hover {
+			.last-span {
+				left: 305px;
+			}
+		}
+	}
+
+	a {
+		color: $black;
+		text-decoration: none;
+		transition: all 0.1s linear;
+		font-size: 16px;
+		font-style: normal;
+		vertical-align: middle;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+}

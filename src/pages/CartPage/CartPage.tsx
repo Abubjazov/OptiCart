@@ -1,9 +1,9 @@
-import { CartList, Checkout } from '../../components'
+import { Checkout } from '../../components'
+
 import './CartPage.scss'
 
 export const CartPage = () => (
-	<div className='cart'>
-		<CartList />
+	<main className='cart'>
 		<Checkout />
-	</div>
+	</main>
 )
