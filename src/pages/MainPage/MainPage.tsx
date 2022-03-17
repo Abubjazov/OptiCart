@@ -71,13 +71,10 @@ export const MainPage = () => {
 
 	return (
 		<main className='main-page'>
-			<div className='container'>
-				<ul>
-					{products.map((item: Product) => (
-						<ProductCard key={nanoid()} {...item} />
-					))}
-				</ul>
-			</div>
+			{products.map((item: Product) => (
+				<ProductCard key={nanoid()} {...item} />
+			))}
+			<div className='container'></div>
 		</main>
 	)
 }
