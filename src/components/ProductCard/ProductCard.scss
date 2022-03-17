@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.product {
+	height: 340px;
+	width: 200px;
+	background-color: $white;
+
+	&-about {
+		padding: 0 10px;
+	}
+
+	&-name {
+		line-height: 25px;
+		font-size: 25px;
+		font-weight: 300;
+		color: $main-color;
+	}
+
+	&-description {
+		margin-top: 10px;
+		height: 60px;
+		line-height: 18px;
+		font-size: 16px;
+		font-weight: 700;
+		color: $black;
+	}
+
+	&-price {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 5px;
+
+		background: #fcfcfc;
+		color: #000;
+
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 30px;
+
+		button {
+			border: none;
+			padding: 0 5px;
+			background-color: $main-color;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+
+	img {
+		height: 200px;
+		width: 100%;
+	}
+}

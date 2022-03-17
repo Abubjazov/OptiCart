@@ -1,4 +1,4 @@
 export * from './Header/Header'
-export * from './Card/Card'
+export * from './ProductCard/ProductCard'
 export * from './CartItem/CartItem'
 export * from './Checkout/Checkout'

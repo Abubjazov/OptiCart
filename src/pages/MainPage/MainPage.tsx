@@ -1,4 +1,6 @@
-import { Card } from '../../components'
+import { nanoid } from 'nanoid'
+
+import { ProductCard } from '../../components'
 import { Product } from '../../interfaces/product.interface'
 
 import './MainPage.scss'
@@ -66,12 +68,13 @@ export const MainPage = () => {
 			price: 36.67,
 		},
 	]
+
 	return (
 		<main className='main-page'>
 			<div className='container'>
 				<ul>
 					{products.map((item: Product) => (
-						<Card {...item} />
+						<ProductCard key={nanoid()} {...item} />
 					))}
 				</ul>
 			</div>
