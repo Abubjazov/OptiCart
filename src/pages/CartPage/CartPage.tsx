@@ -42,8 +42,9 @@ export const CartPage = () => {
 					<CartItem key={nanoid()} {...item} />
 				))}
 			</section>
-
-			<Checkout />
+			<section className='total'>
+				<Checkout />
+			</section>
 		</main>
 	)
 }

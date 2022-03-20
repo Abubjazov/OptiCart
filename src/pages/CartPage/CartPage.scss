@@ -1,7 +1,7 @@
 @import '../../variables';
 
 .cart-page {
-	padding: 10px 0;
+	padding-top: 10px;
 	background: $gray;
 
 	.cart {
@@ -9,5 +9,12 @@
 		grid-template-columns: 1fr;
 		row-gap: 15px;
 		justify-items: center;
+	}
+
+	.total {
+		display: flex;
+		margin-top: 10px;
+		background: $white;
+		justify-content: end;
 	}
 }
