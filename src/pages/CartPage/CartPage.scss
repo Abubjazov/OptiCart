@@ -1,1 +1,13 @@
+@import '../../variables';
 
+.cart-page {
+	padding-top: 10px;
+	background: $gray;
+
+	.cart {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 15px;
+		justify-items: center;
+	}
+}

@@ -2,6 +2,7 @@ import { Product } from '../../interfaces/product.interface'
 import './ProductCard.scss'
 
 export const ProductCard = ({
+	id,
 	name,
 	picture,
 	description,
@@ -13,7 +14,7 @@ export const ProductCard = ({
 			<div className='product-name'>{name}</div>
 			<div className='product-description'>{description}</div>
 			<div className='product-price'>
-				Price: {price} $<button>Add to cart</button>
+				{price} $<button>Add to cart</button>
 			</div>
 		</div>
 	</div>

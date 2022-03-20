@@ -21,8 +21,8 @@
 		margin-top: 10px;
 		height: 60px;
 		line-height: 18px;
-		font-size: 16px;
-		font-weight: 700;
+		font-size: 14px;
+		font-weight: 300;
 		color: $black;
 	}
 
@@ -30,9 +30,10 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 5px;
-		background: #fcfcfc;
-		color: #000;
-		font-size: 15px;
+		margin-left: 13px;
+		background: $white;
+		color: $black;
+		font-size: 17px;
 		font-weight: 300;
 		line-height: 30px;
 		font-weight: 700;
@@ -53,6 +54,6 @@
 
 	img {
 		height: 200px;
-		width: 100%;
+		width: 200px;
 	}
 }

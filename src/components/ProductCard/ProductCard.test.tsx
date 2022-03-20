@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { ProductCard } from './ProductCard'
 
 const product = {
+	id: 1,
 	name: 'Air 1',
 	picture: 'https://i.ibb.co/Y281B6p/nike9.webp',
 	description: 'Qui animi et ullam dignissimos.',
