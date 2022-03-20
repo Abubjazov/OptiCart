@@ -4,7 +4,7 @@ import { cartListItem } from '../../interfaces'
 
 import './CartPage.scss'
 
-export const CartPage = () => {
+export const CartPage = (): JSX.Element => {
 	const products: cartListItem[] = [
 		{
 			id: 2,

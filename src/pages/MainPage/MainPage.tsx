@@ -5,7 +5,7 @@ import { Product } from '../../interfaces/product.interface'
 
 import './MainPage.scss'
 
-export const MainPage = () => {
+export const MainPage = (): JSX.Element => {
 	const products: Product[] = [
 		{
 			id: 1,
