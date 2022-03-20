@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header } from '../components'
-import { CartPage } from '../pages/CartPage/CartPage'
-import { MainPage } from '../pages/MainPage/MainPage'
-import { Page404 } from '../pages/Page404'
+import { CartPage, MainPage, Page404 } from '../pages'
 
 export const App = () => {
 	return (

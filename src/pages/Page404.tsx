@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ErrorMessage } from '../components'
 
 export const Page404 = (): JSX.Element => (
-	<>
+	<main>
 		<ErrorMessage />
 		<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
 			Page doesn't exist
@@ -20,5 +20,5 @@ export const Page404 = (): JSX.Element => (
 		>
 			Back to main page
 		</Link>
-	</>
+	</main>
 )
