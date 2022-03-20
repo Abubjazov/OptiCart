@@ -2,12 +2,16 @@
 
 .header {
 	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 113px;
 
 	h1 {
 		font-size: 31px;
+		line-height: 31px;
 		font-weight: 300;
-		padding: 40px 0;
 		position: relative;
+		align-self: center;
 
 		span {
 			color: #53b5aa;
@@ -24,6 +28,26 @@
 		&:hover {
 			.last-span {
 				left: 305px;
+			}
+		}
+	}
+
+	.header-menu {
+		align-self: center;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 24px;
+
+			li {
+				margin: 0 8px;
+
+				// a:hover {
+				// 	color: $main-color;
+				// }
 			}
 		}
 	}

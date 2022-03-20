@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
 export const Header = () => (
@@ -9,5 +10,28 @@ export const Header = () => (
 			</a>{' '}
 			<span className='last-span'>]</span>
 		</h1>
+
+		<nav className='header-menu'>
+			<ul>
+				<li>
+					<NavLink
+						end
+						to='/'
+						style={({ isActive }) => ({ color: isActive ? '#53b5aa' : '' })}
+					>
+						Main
+					</NavLink>
+				</li>
+
+				<li>
+					<NavLink
+						to='/cart'
+						style={({ isActive }) => ({ color: isActive ? '#53b5aa' : '' })}
+					>
+						Cart
+					</NavLink>
+				</li>
+			</ul>
+		</nav>
 	</header>
 )
