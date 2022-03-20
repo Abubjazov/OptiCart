@@ -16,10 +16,10 @@ export const CartItem = ({
 			<button>Remove product</button>
 		</header>
 
-		<section>
+		<div className='cartitem-descriptor'>
 			<h2>{name}</h2>
 			{description}
-		</section>
+		</div>
 
 		<footer>
 			<div className='quantity'>

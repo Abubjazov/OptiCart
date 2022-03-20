@@ -7,12 +7,10 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<Header />
-			<main>
-				<Routes>
-					<Route path='/' element={<MainPage />} />
-					<Route path='/cart' element={<CartPage />} />
-				</Routes>
-			</main>
+			<Routes>
+				<Route path='/' element={<MainPage />} />
+				<Route path='/cart' element={<CartPage />} />
+			</Routes>
 		</BrowserRouter>
 	)
 }

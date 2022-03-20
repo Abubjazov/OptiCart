@@ -13,10 +13,10 @@ export const ProductCard = ({
 			<img src={picture} alt={name} />
 		</header>
 
-		<section>
+		<div className='product-descriptor'>
 			<h2>{name}</h2>
 			{description}
-		</section>
+		</div>
 
 		<footer>
 			{price} $<button>Add to cart</button>

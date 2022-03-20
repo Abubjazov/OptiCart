@@ -37,14 +37,15 @@ export const CartPage = () => {
 
 	return (
 		<main className='cart-page'>
-			<section className='cart'>
+			<div className='cart'>
 				{products.map((item: cartListItem) => (
 					<CartItem key={nanoid()} {...item} />
 				))}
-			</section>
-			<section className='total'>
+			</div>
+
+			<div className='total'>
 				<Checkout />
-			</section>
+			</div>
 		</main>
 	)
 }
