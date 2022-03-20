@@ -8,14 +8,18 @@ export const ProductCard = ({
 	description,
 	price,
 }: Product): JSX.Element => (
-	<div className='product'>
-		<img src={picture} alt={name} />
-		<div className='product-about'>
-			<div className='product-name'>{name}</div>
-			<div className='product-description'>{description}</div>
-			<div className='product-price'>
-				{price} $<button>Add to cart</button>
-			</div>
-		</div>
-	</div>
+	<article className='product'>
+		<header>
+			<img src={picture} alt={name} />
+		</header>
+
+		<section>
+			<h2>{name}</h2>
+			{description}
+		</section>
+
+		<footer>
+			{price} $<button>Add to cart</button>
+		</footer>
+	</article>
 )

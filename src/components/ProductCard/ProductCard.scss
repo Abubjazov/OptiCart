@@ -5,32 +5,36 @@
 	width: 200px;
 	background-color: $white;
 
-	&-about {
+	img {
+		height: 200px;
+		width: 200px;
+	}
+
+	section {
 		padding: 0 10px;
-	}
-
-	&-name {
-		line-height: 25px;
-		font-size: 25px;
-		font-weight: 300;
-		color: $main-color;
-		font-weight: 300;
-	}
-
-	&-description {
 		margin-top: 10px;
 		height: 60px;
 		line-height: 18px;
 		font-size: 14px;
 		font-weight: 300;
 		color: $black;
+
+		h2 {
+			line-height: 25px;
+			font-size: 25px;
+			font-weight: 300;
+			color: $main-color;
+			font-weight: 300;
+			margin-bottom: 5px;
+		}
 	}
 
-	&-price {
+	footer {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 5px;
+		margin-top: 30px;
 		margin-left: 13px;
+		margin-right: 5px;
 		background: $white;
 		color: $black;
 		font-size: 17px;
@@ -46,14 +50,10 @@
 			font-size: 15px;
 			cursor: pointer;
 			transition: all 0.2s linear;
+
 			&:hover {
 				background-color: $deep-main;
 			}
 		}
-	}
-
-	img {
-		height: 200px;
-		width: 200px;
 	}
 }

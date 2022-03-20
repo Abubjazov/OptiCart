@@ -17,7 +17,7 @@ export const CartItem = ({
 		</header>
 
 		<section>
-			<h2 className='cartitem-name'>{name}</h2>
+			<h2>{name}</h2>
 			{description}
 		</section>
 

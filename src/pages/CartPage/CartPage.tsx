@@ -43,7 +43,7 @@ export const CartPage = () => {
 				))}
 			</section>
 
-			{/* <Checkout /> */}
+			<Checkout />
 		</main>
 	)
 }
