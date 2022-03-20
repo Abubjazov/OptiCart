@@ -37,10 +37,12 @@ export const CartPage = (): JSX.Element => {
 
 	return (
 		<main className='cart-page'>
-			<div className='cart'>
-				{products.map((item: cartListItem) => (
-					<CartItem key={nanoid()} {...item} />
-				))}
+			<div className='container'>
+				<div className='cart'>
+					{products.map((item: cartListItem) => (
+						<CartItem key={nanoid()} {...item} />
+					))}
+				</div>
 			</div>
 
 			<div className='total'>

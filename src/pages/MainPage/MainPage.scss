@@ -3,8 +3,11 @@
 .main-page {
 	background: $gray;
 	padding: 5px 0;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-	row-gap: 10px;
-	justify-items: center;
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+		row-gap: 10px;
+		justify-items: center;
+	}
 }

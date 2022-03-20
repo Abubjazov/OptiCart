@@ -81,9 +81,11 @@ export const MainPage = (): JSX.Element => {
 
 	return (
 		<main className='main-page'>
-			{products.map((item: Product) => (
-				<ProductCard key={nanoid()} {...item} />
-			))}
+			<div className='container'>
+				{products.map((item: Product) => (
+					<ProductCard key={nanoid()} {...item} />
+				))}
+			</div>
 		</main>
 	)
 }
