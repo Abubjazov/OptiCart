@@ -1,6 +1,36 @@
 @import '../../variables';
 
 .checkout {
-	height: 300px;
+	height: 130px;
+	width: 290px;
 	background-color: $white;
+	display: grid;
+
+	h2 {
+		background: $white;
+		border: 1px solid $gray-light;
+		border-style: none none solid none;
+		font-size: 24px;
+		font-weight: 300;
+		margin: 0 0 7px 0;
+		padding: 14px 40px;
+		text-align: center;
+	}
+
+	button {
+		background-color: $main-color;
+		border: 1px solid $gray-light;
+		border-style: none none solid none;
+		color: $white;
+		font-size: 20px;
+		font-weight: 300;
+		padding: 16px 0;
+		width: 290px;
+		transition: all 0.2s linear;
+		cursor: pointer;
+
+		&:hover {
+			background: $deep-main;
+		}
+	}
 }
