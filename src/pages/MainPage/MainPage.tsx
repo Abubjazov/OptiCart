@@ -24,7 +24,7 @@ export const MainPage = () => {
 		<main className='main-page'>
 			<div className='container'>
 				{loading && <Spinner />}
-				{products &&
+				{!loading &&
 					products.map((item: Product) => (
 						<ProductCard key={nanoid()} {...item} />
 					))}

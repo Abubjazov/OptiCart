@@ -25,9 +25,10 @@ export const CartPage = (): JSX.Element => {
 			<div className='container'>
 				<div className='cart'>
 					{loading && <Spinner />}
-					{cart.map((item: CartListItem) => (
-						<CartItem key={nanoid()} {...item} />
-					))}
+					{!loading &&
+						cart.map((item: CartListItem) => (
+							<CartItem key={nanoid()} {...item} />
+						))}
 				</div>
 			</div>
 

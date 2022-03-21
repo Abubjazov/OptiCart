@@ -3,7 +3,7 @@
 .main-page {
 	background: $gray;
 	padding: 5px 0;
-	min-height: calc(100vh - 290px);
+	min-height: calc(100vh - 113px);
 
 	.container {
 		display: grid;
@@ -13,6 +13,6 @@
 	}
 
 	.spinner {
-		margin-top: calc(20vh);
+		margin-top: 20vh;
 	}
 }
