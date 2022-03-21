@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid'
 import { useEffect, useState } from 'react'
 
-import { CartItem, Checkout, Spinner } from '../../components'
+import { CartItem, Checkout, Message, Spinner } from '../../components'
 import { CartListItem } from '../../interfaces'
 import { getCart } from '../../services/OptiCartService'
 
@@ -24,10 +24,13 @@ export const CartPage = (): JSX.Element => {
 			<div className='container'>
 				<div className='cart'>
 					{loading && <Spinner />}
-					{!loading &&
+					{!loading && cart.length > 0 ? (
 						cart.map((item: CartListItem) => (
 							<CartItem key={nanoid()} {...item} />
-						))}
+						))
+					) : (
+						<Message />
+					)}
 				</div>
 			</div>
 
