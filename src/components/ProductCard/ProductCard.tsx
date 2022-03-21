@@ -1,4 +1,5 @@
 import { Product } from '../../interfaces/product.interface'
+import { addToCart } from '../../services/OptiCartService'
 import './ProductCard.scss'
 
 export const ProductCard = ({
@@ -19,7 +20,7 @@ export const ProductCard = ({
 		</div>
 
 		<footer>
-			{price} $<button>Add to cart</button>
+			{price} $<button onClick={() => addToCart(id)}>Add to cart</button>
 		</footer>
 	</article>
 )
