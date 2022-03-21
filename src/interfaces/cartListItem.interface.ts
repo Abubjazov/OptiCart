@@ -1,9 +1,6 @@
-export interface cartListItem {
-	id: number
+import { Product } from './product.interface'
+
+export interface CartListItem extends Product {
 	product_id: number
-	name: string
-	picture: string
-	description: string
-	price: number
 	quantity: number
 }

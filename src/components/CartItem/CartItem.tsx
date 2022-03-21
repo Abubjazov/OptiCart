@@ -1,4 +1,4 @@
-import { cartListItem } from '../../interfaces'
+import { CartListItem } from '../../interfaces'
 import './CartItem.scss'
 
 export const CartItem = ({
@@ -9,7 +9,7 @@ export const CartItem = ({
 	description,
 	price,
 	quantity,
-}: cartListItem): JSX.Element => (
+}: CartListItem): JSX.Element => (
 	<article className='cartitem'>
 		<header>
 			<img src={picture} alt={name} />
