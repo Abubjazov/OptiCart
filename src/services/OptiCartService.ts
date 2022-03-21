@@ -27,7 +27,7 @@ const postResource = async (url: string, body: any) => {
 	return await response.json()
 }
 
-const updateResource = async (url: string, body: any) => {
+const putResource = async (url: string, body: any) => {
 	let response = await fetch(url, {
 		method: 'PUT',
 		headers: {
@@ -61,27 +61,26 @@ const deleteResource = async (url: string) => {
 }
 
 export const getProducts = async (): Promise<Product[]> => {
-	return await getResource(
-		'https://opticartapi.herokuapp.com/api/products'
-	).then(res => res.products)
+	return await getResource(process.env.REACT_APP_BASE_URL + 'products').then(
+		res => res.products
+	)
 }
 
 export const getCart = async (): Promise<CartListItem[]> => {
-	return await getResource(
-		'https://opticartapi.herokuapp.com/api/cart_items'
-	).then(res => res.cart_items)
+	return await getResource(process.env.REACT_APP_BASE_URL + 'cart_items').then(
+		res => res.cart_items
+	)
 }
 
 export const addToCart = async (product_id: number): Promise<CartListItem> => {
-	return await postResource(
-		'https://opticartapi.herokuapp.com/api/cart_items',
-		{ product_id }
-	).then(res => res.cart_items)
+	return await postResource(process.env.REACT_APP_BASE_URL + 'cart_items', {
+		product_id,
+	}).then(res => res.cart_items)
 }
 
 export const removeFromCart = async (cartItemId: number) => {
 	return await deleteResource(
-		`https://opticartapi.herokuapp.com/api/cart_items/${cartItemId}`
+		process.env.REACT_APP_BASE_URL + `cart_items/${cartItemId}`
 	).then(res => res.cart_items)
 }
 
@@ -89,8 +88,8 @@ export const updateQuantity = async (
 	cartItemId: number,
 	quantity: number
 ): Promise<CartListItem> => {
-	return await updateResource(
-		`https://opticartapi.herokuapp.com/api/cart_items/${cartItemId}`,
+	return await putResource(
+		process.env.REACT_APP_BASE_URL + `cart_items/${cartItemId}`,
 		{ quantity }
 	).then(res => res.cart_items)
 }

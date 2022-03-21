@@ -3,11 +3,16 @@
 .main-page {
 	background: $gray;
 	padding: 5px 0;
+	min-height: calc(100vh - 290px);
 
 	.container {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 		row-gap: 10px;
 		justify-items: center;
+	}
+
+	.spinner {
+		margin-top: calc(20vh);
 	}
 }

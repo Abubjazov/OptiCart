@@ -5,6 +5,7 @@
 	background: $gray;
 
 	.cart {
+		min-height: calc(100vh - 290px);
 		display: grid;
 		grid-template-columns: 1fr;
 		row-gap: 15px;
@@ -17,5 +18,9 @@
 		margin-top: 20px;
 		background: $white;
 		justify-content: end;
+	}
+
+	.spinner {
+		margin-top: calc(20vh);
 	}
 }
