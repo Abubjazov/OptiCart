@@ -1,8 +1,7 @@
 import { nanoid } from 'nanoid'
 import { useEffect, useState } from 'react'
 
-import { ProductCard } from '../../components'
-import { Spinner } from '../../components/Spinner/Spinner'
+import { ProductCard, Spinner } from '../../components'
 import { Product } from '../../interfaces/product.interface'
 import { getProducts } from '../../services/OptiCartService'
 

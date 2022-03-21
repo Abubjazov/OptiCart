@@ -43,11 +43,14 @@
 		font-weight: 700;
 
 		button {
+			width: 90px;
+			height: 30px;
 			border: none;
 			padding: 0 5px;
 			background-color: $main-color;
 			color: $white;
 			font-size: 15px;
+			line-height: 14px;
 			cursor: pointer;
 			transition: all 0.2s linear;
 
