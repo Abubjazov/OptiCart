@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { removeFromCart, updateQuantity } from '../../services/OptiCartService'
+import { SmallSpinner } from '../Spinners/SmallSpinner'
 
 import './CartItem.scss'
 
@@ -11,23 +13,39 @@ export const CartItem = ({
 	quantity,
 	updateCart,
 }: any): JSX.Element => {
+	const [loading, setLoading] = useState<boolean>(false)
+
 	const fullPrice = (quantity: number, price: number) => {
 		return (quantity * price).toFixed(2)
 	}
 
 	const removeCartItem = () => {
-		removeFromCart(id).then(() => updateCart())
+		setLoading(true)
+
+		removeFromCart(id)
+			.then(() => updateCart(true))
+			.then(() => setLoading(false))
 	}
 
 	const updateCartItem = (e: any) => {
 		if (e.target.className === 'quantity-plus') {
-			updateQuantity(id, quantity + 1).then(() => updateCart())
+			setLoading(true)
+
+			updateQuantity(id, quantity + 1)
+				.then(() => updateCart(true))
+				.then(() => setLoading(false))
 		}
 
 		if (e.target.className === 'quantity-minus') {
+			setLoading(true)
+
 			quantity > 1
-				? updateQuantity(id, quantity - 1).then(() => updateCart())
-				: removeFromCart(id).then(() => updateCart())
+				? updateQuantity(id, quantity - 1)
+						.then(() => updateCart(true))
+						.then(() => setLoading(false))
+				: removeFromCart(id)
+						.then(() => updateCart(true))
+						.then(() => setLoading(false))
 		}
 	}
 
@@ -35,7 +53,9 @@ export const CartItem = ({
 		<article className='cartitem'>
 			<header>
 				<img src={picture} alt={name} />
-				<button onClick={removeCartItem}>Remove product</button>
+				<button onClick={removeCartItem}>
+					{loading ? <SmallSpinner /> : 'Remove product'}
+				</button>
 			</header>
 
 			<div className='cartitem-descriptor'>
@@ -46,11 +66,11 @@ export const CartItem = ({
 			<footer>
 				<div className='quantity'>
 					<button className='quantity-minus' onClick={updateCartItem}>
-						-
+						{loading ? <SmallSpinner /> : '-'}
 					</button>
 					<span className='quantity-value'>{quantity}</span>
 					<button className='quantity-plus' onClick={updateCartItem}>
-						+
+						{loading ? <SmallSpinner /> : '+'}
 					</button>
 				</div>
 

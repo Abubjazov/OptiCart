@@ -15,8 +15,8 @@ export const CartPage = (): JSX.Element => {
 		updateCart()
 	}, [])
 
-	const updateCart = () => {
-		setLoading(true)
+	const updateCart = (nospinner: boolean = false) => {
+		!nospinner && setLoading(true)
 
 		getCart()
 			.then(result => setCart(result))
