@@ -1,28 +1,33 @@
-import { CartListItem } from '../../interfaces'
 import { removeFromCart, updateQuantity } from '../../services/OptiCartService'
 
 import './CartItem.scss'
 
 export const CartItem = ({
 	id,
-	product_id,
 	name,
 	picture,
 	description,
 	price,
 	quantity,
-}: CartListItem): JSX.Element => {
+	updateCart,
+}: any): JSX.Element => {
+	const fullPrice = (quantity: number, price: number) => {
+		return (quantity * price).toFixed(2)
+	}
+
 	const removeCartItem = () => {
-		removeFromCart(id).then(res => console.log(`removed ${res}`))
+		removeFromCart(id).then(() => updateCart())
 	}
 
 	const updateCartItem = (e: any) => {
 		if (e.target.className === 'quantity-plus') {
-			updateQuantity(id, quantity + 1)
+			updateQuantity(id, quantity + 1).then(() => updateCart())
 		}
 
 		if (e.target.className === 'quantity-minus') {
-			quantity > 1 ? updateQuantity(id, quantity - 1) : removeFromCart(id)
+			quantity > 1
+				? updateQuantity(id, quantity - 1).then(() => updateCart())
+				: removeFromCart(id).then(() => updateCart())
 		}
 	}
 
@@ -51,7 +56,7 @@ export const CartItem = ({
 
 				<h3 className='price'>{price} $</h3>
 
-				<h3 className='full-price'>{price} $</h3>
+				<h3 className='full-price'>{fullPrice(quantity, price)} $</h3>
 			</footer>
 		</article>
 	)

@@ -12,12 +12,16 @@ export const MainPage = () => {
 	const [loading, setLoading] = useState<boolean>(false)
 
 	useEffect(() => {
+		updateProducts()
+	}, [])
+
+	const updateProducts = () => {
 		setLoading(true)
 
 		getProducts()
 			.then(result => setProducts(result))
 			.then(() => setLoading(false))
-	}, [])
+	}
 
 	return (
 		<main className='main-page'>

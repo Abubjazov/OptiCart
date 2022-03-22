@@ -12,12 +12,16 @@ export const CartPage = (): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false)
 
 	useEffect(() => {
+		updateCart()
+	}, [])
+
+	const updateCart = () => {
 		setLoading(true)
 
 		getCart()
 			.then(result => setCart(result))
 			.then(() => setLoading(false))
-	}, [])
+	}
 
 	return (
 		<main className='cart-page'>
@@ -25,8 +29,17 @@ export const CartPage = (): JSX.Element => {
 				<div className='cart'>
 					{loading && <Spinner />}
 					{!loading && cart.length > 0 ? (
-						cart.map((item: CartListItem) => (
-							<CartItem key={nanoid()} {...item} />
+						cart.map(({ id, name, picture, description, price, quantity }) => (
+							<CartItem
+								key={nanoid()}
+								id={id}
+								name={name}
+								picture={picture}
+								description={description}
+								price={price}
+								quantity={quantity}
+								updateCart={updateCart}
+							/>
 						))
 					) : (
 						<Message />
@@ -35,7 +48,7 @@ export const CartPage = (): JSX.Element => {
 			</div>
 
 			<div className='total'>
-				<Checkout />
+				<Checkout cartData={cart} />
 			</div>
 		</main>
 	)
