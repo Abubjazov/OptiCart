@@ -28,22 +28,26 @@ export const CartPage = (): JSX.Element => {
 			<div className='container'>
 				<div className='cart'>
 					{loading && <Spinner />}
-					{!loading && cart.length > 0 ? (
-						cart.map(({ id, name, picture, description, price, quantity }) => (
-							<CartItem
-								key={nanoid()}
-								id={id}
-								name={name}
-								picture={picture}
-								description={description}
-								price={price}
-								quantity={quantity}
-								updateCart={updateCart}
-							/>
-						))
-					) : (
-						<Message />
-					)}
+					{!loading ? (
+						cart.length > 0 ? (
+							cart.map(
+								({ id, name, picture, description, price, quantity }) => (
+									<CartItem
+										key={nanoid()}
+										id={id}
+										name={name}
+										picture={picture}
+										description={description}
+										price={price}
+										quantity={quantity}
+										updateCart={updateCart}
+									/>
+								)
+							)
+						) : (
+							<Message />
+						)
+					) : null}
 				</div>
 			</div>
 

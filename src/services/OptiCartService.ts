@@ -1,57 +1,20 @@
 import { CartListItem, Product } from '../interfaces'
 
-const getResource = async (url: string) => {
-	let response = await fetch(url)
+const request = async (method: string, url: string, body: any = {}) => {
+	let response
 
-	if (!response.ok) {
-		throw new Error(`Could not fetch ${url}, status: ${response.status}`)
+	if (method === 'GET') {
+		response = await fetch(url)
+	} else {
+		response = await fetch(url, {
+			method,
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(body),
+		})
 	}
-
-	return await response.json()
-}
-
-const postResource = async (url: string, body: any) => {
-	let response = await fetch(url, {
-		method: 'POST',
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(body),
-	})
-
-	if (!response.ok) {
-		throw new Error(`Could not fetch ${url}, status: ${response.status}`)
-	}
-
-	return await response.json()
-}
-
-const putResource = async (url: string, body: any) => {
-	let response = await fetch(url, {
-		method: 'PUT',
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(body),
-	})
-
-	if (!response.ok) {
-		throw new Error(`Could not fetch ${url}, status: ${response.status}`)
-	}
-
-	return await response.json()
-}
-
-const deleteResource = async (url: string) => {
-	let response = await fetch(url, {
-		method: 'DELETE',
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/json',
-		},
-	})
 
 	if (!response.ok) {
 		throw new Error(`Could not fetch ${url}, status: ${response.status}`)
@@ -61,25 +24,27 @@ const deleteResource = async (url: string) => {
 }
 
 export const getProducts = async (): Promise<Product[]> => {
-	return await getResource(process.env.REACT_APP_BASE_URL + 'products').then(
+	return await request('GET', process.env.REACT_APP_BASE_URL + 'products').then(
 		res => res.products
 	)
 }
 
 export const getCart = async (): Promise<CartListItem[]> => {
-	return await getResource(process.env.REACT_APP_BASE_URL + 'cart_items').then(
-		res => res.cart_items
-	)
+	return await request(
+		'GET',
+		process.env.REACT_APP_BASE_URL + 'cart_items'
+	).then(res => res.cart_items)
 }
 
 export const addToCart = async (product_id: number): Promise<CartListItem> => {
-	return await postResource(process.env.REACT_APP_BASE_URL + 'cart_items', {
+	return await request('POST', process.env.REACT_APP_BASE_URL + 'cart_items', {
 		product_id,
 	}).then(res => res.cart_items)
 }
 
 export const removeFromCart = async (cartItemId: number) => {
-	return await deleteResource(
+	return await request(
+		'DELETE',
 		process.env.REACT_APP_BASE_URL + `cart_items/${cartItemId}`
 	).then(res => res.cart_items)
 }
@@ -88,7 +53,8 @@ export const updateQuantity = async (
 	cartItemId: number,
 	quantity: number
 ): Promise<CartListItem> => {
-	return await putResource(
+	return await request(
+		'PUT',
 		process.env.REACT_APP_BASE_URL + `cart_items/${cartItemId}`,
 		{ quantity }
 	).then(res => res.cart_items)
