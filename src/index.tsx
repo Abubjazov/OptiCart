@@ -60,12 +60,16 @@ const res2 = {
 
 const { subscribe, dispatch, getState } = store
 
-const getCartDispatch = (cartData: CartListItem[]) =>
-	dispatch(getCart(cartData))
-const removeFromCartDispatch = (id: number) => dispatch(removeFromCart(id))
-const addToCartDispatch = (product: CartListItem) =>
-	dispatch(addToCart(product))
-// const updateQuantityDispatch = (data: any) => dispatch(updateQuantity(data))
+const bindActionCreator =
+	(creator: any, dispatch: any) =>
+	(...args: any) => {
+		dispatch(creator(...args))
+	}
+
+const getCartDispatch = bindActionCreator(getCart, dispatch)
+const removeFromCartDispatch = bindActionCreator(removeFromCart, dispatch)
+const addToCartDispatch = bindActionCreator(addToCart, dispatch)
+// const updateQuantityDispatch = bindActionCreator(updateQuantity, dispatch)
 
 subscribe(() => {
 	console.log(getState())
