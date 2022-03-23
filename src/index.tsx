@@ -55,9 +55,15 @@ const res2 = {
 
 const { subscribe, dispatch, getState } = store
 
-const getCartDispatch = bindActionCreators(getCart, dispatch)
-const removeFromCartDispatch = bindActionCreators(removeFromCart, dispatch)
-const addToCartDispatch = bindActionCreators(addToCart, dispatch)
+const { getCartDispatch, removeFromCartDispatch, addToCartDispatch } =
+	bindActionCreators(
+		{
+			getCartDispatch: getCart,
+			removeFromCartDispatch: removeFromCart,
+			addToCartDispatch: addToCart,
+		},
+		dispatch
+	)
 
 subscribe(() => {
 	console.log(getState())
@@ -66,7 +72,6 @@ subscribe(() => {
 getCartDispatch(res)
 removeFromCartDispatch(2)
 addToCartDispatch(res2)
-// updateQuantityDispatch(res3)
 
 ReactDOM.render(
 	<React.StrictMode>
