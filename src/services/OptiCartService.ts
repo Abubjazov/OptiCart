@@ -1,7 +1,7 @@
 import { CartListItem, Product } from '../interfaces'
 
 const request = async (method: string, url: string, body: any = {}) => {
-	let response
+	let response: Response
 
 	if (method === 'GET') {
 		response = await fetch(url)
