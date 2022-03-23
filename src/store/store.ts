@@ -3,10 +3,4 @@ import { rootReducer } from './reducers'
 
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-const preloadedState = {}
-
-export const store = createStore(
-	rootReducer,
-	preloadedState,
-	composeWithDevTools()
-)
+export const store = createStore(rootReducer, composeWithDevTools())
