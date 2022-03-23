@@ -1,18 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import { App } from './App/App'
 import { store } from './store/store'
+import { addToCart, getCart, removeFromCart } from './store/actions/actions'
 
 import './index.scss'
-import {
-	addToCart,
-	getCart,
-	removeFromCart,
-	updateQuantity,
-} from './store/actions/actions'
-import { CartListItem } from './interfaces'
 
 const res = [
 	{
@@ -60,16 +55,9 @@ const res2 = {
 
 const { subscribe, dispatch, getState } = store
 
-const bindActionCreator =
-	(creator: any, dispatch: any) =>
-	(...args: any) => {
-		dispatch(creator(...args))
-	}
-
-const getCartDispatch = bindActionCreator(getCart, dispatch)
-const removeFromCartDispatch = bindActionCreator(removeFromCart, dispatch)
-const addToCartDispatch = bindActionCreator(addToCart, dispatch)
-// const updateQuantityDispatch = bindActionCreator(updateQuantity, dispatch)
+const getCartDispatch = bindActionCreators(getCart, dispatch)
+const removeFromCartDispatch = bindActionCreators(removeFromCart, dispatch)
+const addToCartDispatch = bindActionCreators(addToCart, dispatch)
 
 subscribe(() => {
 	console.log(getState())
