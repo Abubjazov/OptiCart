@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 
 import { App } from './App/App'
 import { store } from './store/store'
-import { addToCart, getCart, removeFromCart } from './store/actions/actions'
+import * as actions from './store/actions/actions'
 
 import './index.scss'
 
@@ -55,23 +55,18 @@ const res2 = {
 
 const { subscribe, dispatch, getState } = store
 
-const { getCartDispatch, removeFromCartDispatch, addToCartDispatch } =
-	bindActionCreators(
-		{
-			getCartDispatch: getCart,
-			removeFromCartDispatch: removeFromCart,
-			addToCartDispatch: addToCart,
-		},
-		dispatch
-	)
+const { getCart, removeFromCart, addToCart } = bindActionCreators(
+	actions,
+	dispatch
+)
 
 subscribe(() => {
 	console.log(getState())
 })
 
-getCartDispatch(res)
-removeFromCartDispatch(2)
-addToCartDispatch(res2)
+getCart(res)
+removeFromCart(2)
+addToCart(res2)
 
 ReactDOM.render(
 	<React.StrictMode>
