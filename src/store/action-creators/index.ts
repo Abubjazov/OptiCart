@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import * as UserActionCreators from './user.actionCreators'
+import * as CartActionCreators from './cart.actionCreators'
 
 export default {
-	...UserActionCreators,
+	...CartActionCreators,
 }

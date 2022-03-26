@@ -24,3 +24,28 @@ export const fetchCart = () => {
 		}
 	}
 }
+
+export const addToCart = (product_id: number) => {
+	return async (dispatch: Dispatch<CartAction>) => {
+		try {
+			dispatch({ type: CartActionTypes.ADD_TO_CART, payload: product_id })
+
+			const response = await axios.post(
+				process.env.REACT_APP_BASE_URL + 'cart_items',
+				{
+					product_id,
+				}
+			)
+
+			dispatch({
+				type: CartActionTypes.ADD_TO_CART_SUCCESS,
+				payload: response.data.cart_items,
+			})
+		} catch (error) {
+			dispatch({
+				type: CartActionTypes.ADD_TO_CART_ERROR,
+				payload: `An error occurred while adding an item to the cart!${error}`,
+			})
+		}
+	}
+}

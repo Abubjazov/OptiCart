@@ -1,25 +1,21 @@
-import { useState } from 'react'
+import { FC } from 'react'
+import { useActions } from '../../hooks/useActions'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import { Product } from '../../interfaces/product.interface'
-import { addToCart } from '../../services/OptiCartService'
 import { SmallSpinner } from '../Spinners/SmallSpinner'
 
 import './ProductCard.scss'
 
-export const ProductCard = ({
+export const ProductCard: FC<Product> = ({
 	id,
 	name,
 	picture,
 	description,
 	price,
-}: Product): JSX.Element => {
-	const [addStatus, setAddStatus] = useState<boolean>(false)
-
-	const addProduct = () => {
-		setAddStatus(true)
-
-		addToCart(id).then(() => setAddStatus(false))
-	}
+}): JSX.Element => {
+	const { currentItemId, status } = useTypedSelector(state => state.cart)
+	const { addToCart } = useActions()
 
 	return (
 		<article className='product'>
@@ -34,8 +30,12 @@ export const ProductCard = ({
 
 			<footer>
 				{price} $
-				<button onClick={addProduct}>
-					{addStatus ? <SmallSpinner /> : 'Add to cart'}
+				<button onClick={() => addToCart(id)}>
+					{status === 'loading' && currentItemId === id ? (
+						<SmallSpinner />
+					) : (
+						'Add to cart'
+					)}
 				</button>
 			</footer>
 		</article>

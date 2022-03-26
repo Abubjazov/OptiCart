@@ -25,7 +25,15 @@ export const CartPage: FC = (): JSX.Element => {
 	}, [])
 
 	if (status === 'loading') {
-		return <Spinner />
+		return (
+			<main className='cart-page'>
+				<div className='container'>
+					<div className='cart'>
+						<Spinner />
+					</div>
+				</div>
+			</main>
+		)
 	}
 
 	if (status === 'error') {
@@ -56,7 +64,7 @@ export const CartPage: FC = (): JSX.Element => {
 		<main className='cart-page'>
 			<div className='container'>
 				<div className='cart'>
-					{cart.length > 0 ? (
+					{cart && cart.length > 0 ? (
 						cart.map((item: CartListItem) => (
 							<CartItem key={nanoid()} {...item} />
 						))

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
 import { CartListItem } from '../../interfaces'
 import { removeFromCart, updateQuantity } from '../../services/OptiCartService'
@@ -6,14 +6,14 @@ import { SmallSpinner } from '../Spinners/SmallSpinner'
 
 import './CartItem.scss'
 
-export const CartItem = ({
+export const CartItem: FC<CartListItem> = ({
 	id,
 	name,
 	picture,
 	description,
 	price,
 	quantity,
-}: CartListItem): JSX.Element => {
+}): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false)
 
 	const fullPrice = (quantity: number, price: number) => {
