@@ -1,4 +1,6 @@
 import { useState } from 'react'
+
+import { CartListItem } from '../../interfaces'
 import { removeFromCart, updateQuantity } from '../../services/OptiCartService'
 import { SmallSpinner } from '../Spinners/SmallSpinner'
 
@@ -11,8 +13,7 @@ export const CartItem = ({
 	description,
 	price,
 	quantity,
-	updateCart,
-}: any): JSX.Element => {
+}: CartListItem): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false)
 
 	const fullPrice = (quantity: number, price: number) => {
@@ -22,9 +23,7 @@ export const CartItem = ({
 	const removeCartItem = () => {
 		setLoading(true)
 
-		removeFromCart(id)
-			.then(() => updateCart(true))
-			.then(() => setLoading(false))
+		removeFromCart(id).then(() => setLoading(false))
 	}
 
 	const updateCartItem = (e: any) => {
@@ -32,7 +31,7 @@ export const CartItem = ({
 			setLoading(true)
 
 			updateQuantity(id, quantity + 1)
-				.then(() => updateCart(true))
+				// .then(() => updateCart(true))
 				.then(() => setLoading(false))
 		}
 
@@ -41,10 +40,10 @@ export const CartItem = ({
 
 			quantity > 1
 				? updateQuantity(id, quantity - 1)
-						.then(() => updateCart(true))
+						// .then(() => updateCart(true))
 						.then(() => setLoading(false))
 				: removeFromCart(id)
-						.then(() => updateCart(true))
+						// .then(() => updateCart(true))
 						.then(() => setLoading(false))
 		}
 	}

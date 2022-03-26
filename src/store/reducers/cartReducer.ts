@@ -1,34 +1,24 @@
-import { Action, CartListItem } from '../../interfaces'
+import { CartAction, CartActionTypes, CartState } from '../../interfaces'
 
-const initialState: { cart: CartListItem[] } = { cart: [] }
+const initialState: CartState = {
+	cart: [],
+	status: 'waiting',
+	error: null,
+}
 
-export const cartReducer = (state = initialState, action: Action) => {
+export const cartReducer = (
+	state: CartState = initialState,
+	action: CartAction
+): CartState => {
 	switch (action.type) {
-		case 'GET_CART':
-			return { ...state, cart: [...action.payload] }
+		case CartActionTypes.FETCH_CART:
+			return { status: 'loading', cart: [], error: null }
 
-		case 'ADD_TO_CART':
-			return {
-				...state,
-				cart: [...state.cart, action.payload],
-			}
+		case CartActionTypes.FETCH_CART_SUCCESS:
+			return { status: 'waiting', cart: action.payload, error: null }
 
-		case 'REMOVE_FROM_CART':
-			return {
-				...state,
-				cart: state.cart.filter(item => item.id !== action.payload),
-			}
-
-		// case 'UPDATE_QUANTITY':
-		// 	return {
-		// 		...state,
-		// 		cart: [
-		// 			...state.cart.filter(item => item.id !== action.payload.id),
-		// 			...(state.cart.filter(
-		// 				item => item.id === action.payload.id
-		// 			))[0].quantity = action.payload.quantity,
-		// 		],
-		// 	}
+		case CartActionTypes.FETCH_CART_ERROR:
+			return { status: 'error', cart: [], error: action.payload }
 
 		default:
 			return state
