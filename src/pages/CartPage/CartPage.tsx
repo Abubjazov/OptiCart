@@ -16,7 +16,9 @@ import { CartListItem } from '../../interfaces'
 import './CartPage.scss'
 
 export const CartPage: FC = (): JSX.Element => {
-	const { cart, error, status } = useTypedSelector(state => state.cart)
+	const { currentItemId, cart, error, status } = useTypedSelector(
+		state => state.cart
+	)
 	const { fetchCart } = useActions()
 
 	useEffect(() => {
@@ -24,7 +26,7 @@ export const CartPage: FC = (): JSX.Element => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	if (status === 'loading') {
+	if (status === 'loading' && currentItemId === null) {
 		return (
 			<main className='cart-page'>
 				<div className='container'>
@@ -39,7 +41,6 @@ export const CartPage: FC = (): JSX.Element => {
 	if (status === 'error') {
 		return (
 			<main>
-				<ErrorMessage />
 				<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
 					{error}
 				</p>

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import { CartListItem } from '../../interfaces'
-import { SmallSpinner } from '../Spinners/SmallSpinner'
+import { SmallSpinnerBlack } from '../Spinners/SmallSpinnerBlack'
 
 import './Checkout.scss'
 
@@ -23,8 +23,15 @@ export const Checkout: FC = (): JSX.Element => {
 	return (
 		<section className='checkout'>
 			<h2>
-				Total: {status === 'loading' ? <SmallSpinner /> : getTotal(cart)} $
+				<div className='wrapper'>
+					{status === 'loading' ? (
+						<SmallSpinnerBlack />
+					) : (
+						`Total: ${getTotal(cart)} $`
+					)}
+				</div>
 			</h2>
+
 			<button>Checkout</button>
 		</section>
 	)

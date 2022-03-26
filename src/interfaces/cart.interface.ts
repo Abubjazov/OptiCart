@@ -4,12 +4,15 @@ export enum CartActionTypes {
 	FETCH_CART = 'FETCH_CART',
 	FETCH_CART_SUCCESS = 'FETCH_CART_SUCCESS',
 	FETCH_CART_ERROR = 'FETCH_CART_ERROR',
+
 	ADD_TO_CART = 'ADD_TO_CART',
 	ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS',
 	ADD_TO_CART_ERROR = 'ADD_TO_CART_ERROR',
+
 	REMOVE_FROM_CART = 'REMOVE_FROM_CART',
 	REMOVE_FROM_CART_SUCCESS = 'REMOVE_FROM_CART_SUCCESS',
 	REMOVE_FROM_CART_ERROR = 'REMOVE_FROM_CART_ERROR',
+
 	UPDATE_CART_QUANTITY = 'UPDATE_CART_QUANTITY',
 	UPDATE_CART_QUANTITY_SUCCESS = 'UPDATE_CART_QUANTITY_SUCCESS',
 	UPDATE_CART_QUANTITY_ERROR = 'UPDATE_CART_QUANTITY_ERROR',
@@ -54,18 +57,20 @@ interface addToCartErrorAction {
 	type: CartActionTypes.ADD_TO_CART_ERROR
 	payload: string
 }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
+
+interface removeFromCartAction {
+	type: CartActionTypes.REMOVE_FROM_CART
+	payload: number
+}
+
+interface removeFromCartSuccessAction {
+	type: CartActionTypes.REMOVE_FROM_CART_SUCCESS
+	payload: number
+}
+interface removeFromCartErrorAction {
+	type: CartActionTypes.REMOVE_FROM_CART_ERROR
+	payload: string
+}
 // interface Action {
 // 	type: CartActionTypes
 // 	payload: any
@@ -86,3 +91,6 @@ export type CartAction =
 	| addToCartAction
 	| addToCartSuccessAction
 	| addToCartErrorAction
+	| removeFromCartAction
+	| removeFromCartSuccessAction
+	| removeFromCartErrorAction

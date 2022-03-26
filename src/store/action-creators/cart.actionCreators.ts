@@ -19,7 +19,7 @@ export const fetchCart = () => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.FETCH_CART_ERROR,
-				payload: `An error occurred while loading the cart!${error}`,
+				payload: `An error occurred while loading the cart! ${error}`,
 			})
 		}
 	}
@@ -44,7 +44,29 @@ export const addToCart = (product_id: number) => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.ADD_TO_CART_ERROR,
-				payload: `An error occurred while adding an item to the cart!${error}`,
+				payload: `An error occurred while adding an item to the cart! ${error}`,
+			})
+		}
+	}
+}
+
+export const removeFromCart = (product_id: number) => {
+	return async (dispatch: Dispatch<CartAction>) => {
+		try {
+			dispatch({ type: CartActionTypes.REMOVE_FROM_CART, payload: product_id })
+
+			const response = await axios.delete(
+				process.env.REACT_APP_BASE_URL + `cart_items/${product_id}`
+			)
+
+			dispatch({
+				type: CartActionTypes.REMOVE_FROM_CART_SUCCESS,
+				payload: response.data.id,
+			})
+		} catch (error) {
+			dispatch({
+				type: CartActionTypes.REMOVE_FROM_CART_ERROR,
+				payload: `An error occurred while removing an item from the cart! ${error}`,
 			})
 		}
 	}
