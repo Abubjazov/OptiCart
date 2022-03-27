@@ -71,3 +71,29 @@ export const removeFromCart = (product_id: number) => {
 		}
 	}
 }
+
+export const updateCartQuantity = (cartItemId: number, quantity: number) => {
+	return async (dispatch: Dispatch<CartAction>) => {
+		try {
+			dispatch({
+				type: CartActionTypes.UPDATE_CART_QUANTITY,
+				payload: { cartItemId, quantity },
+			})
+
+			await axios.put(
+				process.env.REACT_APP_BASE_URL + `cart_items/${cartItemId}`,
+				{ quantity }
+			)
+
+			dispatch({
+				type: CartActionTypes.UPDATE_CART_QUANTITY_SUCCESS,
+				payload: { cartItemId, quantity },
+			})
+		} catch (error) {
+			dispatch({
+				type: CartActionTypes.UPDATE_CART_QUANTITY_ERROR,
+				payload: `An error occurred while updating an cart item quantity! ${error}`,
+			})
+		}
+	}
+}

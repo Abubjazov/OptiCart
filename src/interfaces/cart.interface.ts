@@ -71,18 +71,19 @@ interface removeFromCartErrorAction {
 	type: CartActionTypes.REMOVE_FROM_CART_ERROR
 	payload: string
 }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
-// interface Action {
-// 	type: CartActionTypes
-// 	payload: any
-// }
+
+interface updateCartQuantityAction {
+	type: CartActionTypes.UPDATE_CART_QUANTITY
+	payload: { cartItemId: number; quantity: number }
+}
+interface updateCartQuantitySuccessAction {
+	type: CartActionTypes.UPDATE_CART_QUANTITY_SUCCESS
+	payload: { cartItemId: number; quantity: number }
+}
+interface updateCartQuantityErrorAction {
+	type: CartActionTypes.UPDATE_CART_QUANTITY_ERROR
+	payload: string
+}
 
 export type CartAction =
 	| FetchCartAction
@@ -94,3 +95,6 @@ export type CartAction =
 	| removeFromCartAction
 	| removeFromCartSuccessAction
 	| removeFromCartErrorAction
+	| updateCartQuantityAction
+	| updateCartQuantitySuccessAction
+	| updateCartQuantityErrorAction

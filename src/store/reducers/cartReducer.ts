@@ -70,6 +70,29 @@ export const cartReducer = (
 		case CartActionTypes.REMOVE_FROM_CART_ERROR:
 			return { ...state, status: 'error', error: action.payload }
 
+		case CartActionTypes.UPDATE_CART_QUANTITY:
+			return {
+				...state,
+				status: 'loading',
+				error: null,
+				currentItemId: action.payload.cartItemId,
+			}
+
+		case CartActionTypes.UPDATE_CART_QUANTITY_SUCCESS:
+			return {
+				...state,
+				status: 'waiting',
+				cart: state.cart.map((item: CartListItem) => {
+					if (item.id === action.payload.cartItemId) {
+						item.quantity = action.payload.quantity
+					}
+					return item
+				}),
+			}
+
+		case CartActionTypes.UPDATE_CART_QUANTITY_ERROR:
+			return { ...state, status: 'error', error: action.payload }
+
 		default:
 			return state
 	}

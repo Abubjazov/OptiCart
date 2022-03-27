@@ -2,13 +2,7 @@ import { nanoid } from 'nanoid'
 import { FC, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import {
-	CartItem,
-	Checkout,
-	ErrorMessage,
-	Message,
-	Spinner,
-} from '../../components'
+import { CartItem, Checkout, Message, Spinner } from '../../components'
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { CartListItem } from '../../interfaces'
