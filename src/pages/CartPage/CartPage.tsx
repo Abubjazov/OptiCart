@@ -1,8 +1,13 @@
 import { nanoid } from 'nanoid'
 import { FC, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
-import { CartItem, Checkout, Message, Spinner } from '../../components'
+import {
+	CartItem,
+	Checkout,
+	ErrorMessage,
+	Message,
+	Spinner,
+} from '../../components'
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { CartListItem } from '../../interfaces'
@@ -35,22 +40,7 @@ export const CartPage: FC = (): JSX.Element => {
 	if (status === 'error') {
 		return (
 			<main>
-				<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
-					{error}
-				</p>
-				<Link
-					to='/'
-					style={{
-						display: 'block',
-						textAlign: 'center',
-						fontWeight: 300,
-						fontSize: 24,
-						marginTop: 13,
-						color: '#429188',
-					}}
-				>
-					Back to main page
-				</Link>
+				<ErrorMessage error={error} />
 			</main>
 		)
 	}

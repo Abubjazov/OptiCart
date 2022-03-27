@@ -25,7 +25,6 @@ export const cartReducer = (
 				...state,
 				status: 'waiting',
 				cart: action.payload,
-				currentItemId: null,
 				error: null,
 			}
 
@@ -34,7 +33,6 @@ export const cartReducer = (
 				...state,
 				status: 'error',
 				error: action.payload,
-				currentItemId: null,
 			}
 
 		case CartActionTypes.ADD_TO_CART:
@@ -50,7 +48,6 @@ export const cartReducer = (
 				...state,
 				status: 'waiting',
 				cart: [...state.cart, action.payload],
-				currentItemId: null,
 			}
 
 		case CartActionTypes.ADD_TO_CART_ERROR:
@@ -58,7 +55,6 @@ export const cartReducer = (
 				...state,
 				status: 'error',
 				error: action.payload,
-				currentItemId: null,
 			}
 
 		case CartActionTypes.REMOVE_FROM_CART:
@@ -73,7 +69,7 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-				currentItemId: null,
+
 				cart: state.cart.filter(
 					(item: CartListItem) => item.id !== action.payload
 				),
@@ -84,7 +80,6 @@ export const cartReducer = (
 				...state,
 				status: 'error',
 				error: action.payload,
-				currentItemId: null,
 			}
 
 		case CartActionTypes.UPDATE_CART_QUANTITY:
@@ -99,7 +94,7 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-				currentItemId: null,
+
 				cart: state.cart.map((item: CartListItem) => {
 					if (item.id === action.payload.cartItemId) {
 						item.quantity = action.payload.quantity
@@ -113,7 +108,6 @@ export const cartReducer = (
 				...state,
 				status: 'error',
 				error: action.payload,
-				currentItemId: null,
 			}
 
 		default:

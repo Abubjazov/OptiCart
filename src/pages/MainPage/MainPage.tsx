@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid'
 import { FC, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import { ProductCard, Spinner } from '../../components'
+import { ErrorMessage, ProductCard, Spinner } from '../../components'
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Product } from '../../interfaces/product.interface'
@@ -33,22 +33,7 @@ export const MainPage: FC = (): JSX.Element => {
 	if (status === 'error') {
 		return (
 			<main>
-				<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
-					{error}
-				</p>
-				<Link
-					to='/'
-					style={{
-						display: 'block',
-						textAlign: 'center',
-						fontWeight: 300,
-						fontSize: 24,
-						marginTop: 13,
-						color: '#429188',
-					}}
-				>
-					Back to main page
-				</Link>
+				<ErrorMessage error={error} />
 			</main>
 		)
 	}

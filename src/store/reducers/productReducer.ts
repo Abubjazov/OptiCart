@@ -29,7 +29,6 @@ export const productReducer = (
 				...state,
 				status: 'waiting',
 				products: action.payload,
-				currentProductId: null,
 				error: null,
 			}
 
@@ -37,7 +36,6 @@ export const productReducer = (
 			return {
 				...state,
 				status: 'error',
-				currentProductId: null,
 				error: action.payload,
 			}
 
