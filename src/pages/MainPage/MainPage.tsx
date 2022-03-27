@@ -56,10 +56,9 @@ export const MainPage: FC = (): JSX.Element => {
 	return (
 		<main className='main-page'>
 			<div className='container'>
-				{products &&
-					products.map((item: Product) => (
-						<ProductCard key={nanoid()} {...item} />
-					))}
+				{products.map((item: Product) => (
+					<ProductCard key={nanoid()} {...item} />
+				))}
 			</div>
 		</main>
 	)

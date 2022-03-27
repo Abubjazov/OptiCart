@@ -15,8 +15,6 @@ export const CartPage: FC = (): JSX.Element => {
 	)
 	const { fetchCart } = useActions()
 
-	console.log(cart)
-
 	useEffect(() => {
 		fetchCart()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,7 +59,7 @@ export const CartPage: FC = (): JSX.Element => {
 		<main className='cart-page'>
 			<div className='container'>
 				<div className='cart'>
-					{cart && cart.length > 0 ? (
+					{cart.length > 0 ? (
 						cart
 							.map((item: CartListItem) => (
 								<CartItem key={nanoid()} {...item} />
