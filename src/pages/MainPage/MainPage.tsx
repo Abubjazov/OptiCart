@@ -22,11 +22,9 @@ export const MainPage: FC = (): JSX.Element => {
 
 	if (status === 'loading' && currentProductId === null) {
 		return (
-			<main className='cart-page'>
+			<main className='main-page'>
 				<div className='container'>
-					<div className='cart'>
-						<Spinner />
-					</div>
+					<Spinner />
 				</div>
 			</main>
 		)
