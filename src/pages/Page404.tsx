@@ -1,9 +1,11 @@
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { ErrorMessage } from '../components'
 
-export const Page404 = (): JSX.Element => (
+import { ErrorGif } from '../components'
+
+export const Page404: FC = (): JSX.Element => (
 	<main>
-		<ErrorMessage />
+		<ErrorGif />
 		<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
 			Page doesn't exist
 		</p>
