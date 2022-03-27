@@ -32,14 +32,12 @@ export const addToCart = (product_id: number) => {
 
 			const response = await axios.post(
 				process.env.REACT_APP_BASE_URL + 'cart_items',
-				{
-					product_id,
-				}
+				{ product_id }
 			)
 
 			dispatch({
 				type: CartActionTypes.ADD_TO_CART_SUCCESS,
-				payload: response.data.cart_items,
+				payload: response.data,
 			})
 		} catch (error) {
 			dispatch({

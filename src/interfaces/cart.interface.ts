@@ -51,7 +51,7 @@ interface addToCartAction {
 
 interface addToCartSuccessAction {
 	type: CartActionTypes.ADD_TO_CART_SUCCESS
-	payload: CartListItem[]
+	payload: CartListItem
 }
 interface addToCartErrorAction {
 	type: CartActionTypes.ADD_TO_CART_ERROR

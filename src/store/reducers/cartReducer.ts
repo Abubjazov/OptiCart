@@ -49,7 +49,7 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-				cart: action.payload,
+				cart: [...state.cart, action.payload],
 				currentItemId: null,
 			}
 
