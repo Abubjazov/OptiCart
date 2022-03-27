@@ -18,14 +18,15 @@ export const productReducer = (
 	switch (action.type) {
 		case ProductActionTypes.FETCH_PRODUCTS:
 			return {
+				...state,
 				status: 'loading',
-				products: [],
 				currentProductId: null,
 				error: null,
 			}
 
 		case ProductActionTypes.FETCH_PRODUCTS_SUCCESS:
 			return {
+				...state,
 				status: 'waiting',
 				products: action.payload,
 				currentProductId: null,
@@ -34,8 +35,8 @@ export const productReducer = (
 
 		case ProductActionTypes.FETCH_PRODUCTS_ERROR:
 			return {
+				...state,
 				status: 'error',
-				products: [],
 				currentProductId: null,
 				error: action.payload,
 			}

@@ -3,6 +3,7 @@ import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import { CartListItem } from '../../interfaces'
+import { MediumSpinner } from '../Spinners/MediumSpinner'
 import { SmallSpinner } from '../Spinners/SmallSpinner'
 
 import './CartItem.scss'
@@ -71,7 +72,15 @@ export const CartItem: FC<CartListItem> = ({
 
 				<h3 className='price'>{price} $</h3>
 
-				<h3 className='full-price'>{fullPrice(quantity, price)} $</h3>
+				<h3 className='full-price'>
+					<div className='wrapper'>
+						{status === 'loading' && currentItemId === id ? (
+							<MediumSpinner />
+						) : (
+							`${fullPrice(quantity, price)} $`
+						)}
+					</div>
+				</h3>
 			</footer>
 		</article>
 	)

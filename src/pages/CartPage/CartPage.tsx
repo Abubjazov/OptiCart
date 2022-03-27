@@ -10,10 +10,12 @@ import { CartListItem } from '../../interfaces'
 import './CartPage.scss'
 
 export const CartPage: FC = (): JSX.Element => {
-	const { currentItemId, cart, error, status } = useTypedSelector(
+	const { status, currentItemId, error, cart } = useTypedSelector(
 		state => state.cart
 	)
 	const { fetchCart } = useActions()
+
+	console.log(cart)
 
 	useEffect(() => {
 		fetchCart()
@@ -60,9 +62,11 @@ export const CartPage: FC = (): JSX.Element => {
 			<div className='container'>
 				<div className='cart'>
 					{cart && cart.length > 0 ? (
-						cart.map((item: CartListItem) => (
-							<CartItem key={nanoid()} {...item} />
-						))
+						cart
+							.map((item: CartListItem) => (
+								<CartItem key={nanoid()} {...item} />
+							))
+							.reverse()
 					) : (
 						<Message />
 					)}

@@ -18,10 +18,11 @@ export const cartReducer = (
 ): CartState => {
 	switch (action.type) {
 		case CartActionTypes.FETCH_CART:
-			return { status: 'loading', cart: [], currentItemId: null, error: null }
+			return { ...state, status: 'loading', currentItemId: null, error: null }
 
 		case CartActionTypes.FETCH_CART_SUCCESS:
 			return {
+				...state,
 				status: 'waiting',
 				cart: action.payload,
 				currentItemId: null,
@@ -30,16 +31,16 @@ export const cartReducer = (
 
 		case CartActionTypes.FETCH_CART_ERROR:
 			return {
+				...state,
 				status: 'error',
-				cart: [],
 				error: action.payload,
 				currentItemId: null,
 			}
 
 		case CartActionTypes.ADD_TO_CART:
 			return {
+				...state,
 				status: 'loading',
-				cart: [],
 				error: null,
 				currentItemId: action.payload,
 			}
