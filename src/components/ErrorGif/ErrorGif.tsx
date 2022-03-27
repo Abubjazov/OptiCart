@@ -1,8 +1,6 @@
-import { FC } from 'react'
-
 import errorGif from './error.gif'
 
-export const ErrorGif: FC = (): JSX.Element => (
+export const ErrorGif = (): JSX.Element => (
 	<img
 		style={{
 			display: 'block',

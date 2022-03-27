@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import { CartListItem } from '../../interfaces'
@@ -6,7 +5,7 @@ import { MediumSpinnerBlack } from '../Spinners/MediumSpinnerBlack'
 
 import './Checkout.scss'
 
-export const Checkout: FC = (): JSX.Element => {
+export const Checkout = (): JSX.Element => {
 	const { cart, status } = useTypedSelector(state => state.cart)
 
 	const getTotal = (cart: CartListItem[]): string => {

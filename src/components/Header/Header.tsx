@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
-export const Header: FC = (): JSX.Element => (
+export const Header = (): JSX.Element => (
 	<header className='header'>
 		<h1>
 			sneakers. <span>[</span>{' '}

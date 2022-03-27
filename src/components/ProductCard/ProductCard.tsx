@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
@@ -7,13 +6,13 @@ import { SmallSpinner } from '../Spinners/SmallSpinner'
 
 import './ProductCard.scss'
 
-export const ProductCard: FC<Product> = ({
+export const ProductCard = ({
 	id,
 	name,
 	picture,
 	description,
 	price,
-}): JSX.Element => {
+}: Product): JSX.Element => {
 	const { currentItemId, status } = useTypedSelector(state => state.cart)
 	const { addToCart } = useActions()
 

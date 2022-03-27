@@ -1,10 +1,7 @@
-import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import './ErrorMessage.scss'
 
-export const ErrorMessage: FC<ErrorMessageProps> = ({
-	error,
-}: ErrorMessageProps): JSX.Element => (
+export const ErrorMessage = ({ error }: ErrorMessageProps): JSX.Element => (
 	<div className='error-message'>
 		<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
 			{error}
