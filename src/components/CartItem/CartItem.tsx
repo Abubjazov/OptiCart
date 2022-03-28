@@ -2,6 +2,7 @@ import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import { CartListItem } from '../../interfaces'
+import { fullPrice } from '../../utils/utils'
 import { MediumSpinner } from '../Spinners/MediumSpinner'
 import { SmallSpinner } from '../Spinners/SmallSpinner'
 
@@ -17,10 +18,6 @@ export const CartItem = ({
 }: CartListItem): JSX.Element => {
 	const { currentItemId, status } = useTypedSelector(state => state.cart)
 	const { removeFromCart, updateCartQuantity } = useActions()
-
-	const fullPrice = (quantity: number, price: number) => {
-		return (quantity * price).toFixed(2)
-	}
 
 	const updateQuantity = (e: any) => {
 		if (e.target.classList.contains('quantity-minus')) {

@@ -1,23 +1,12 @@
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { getTotal } from '../../utils/utils'
 
-import { CartListItem } from '../../interfaces'
 import { MediumSpinnerBlack } from '../Spinners/MediumSpinnerBlack'
 
 import './Checkout.scss'
 
 export const Checkout = (): JSX.Element => {
 	const { cart, status } = useTypedSelector(state => state.cart)
-
-	const getTotal = (cart: CartListItem[]): string => {
-		return (
-			cart &&
-			cart
-				.reduce((sum: number, current: CartListItem): number => {
-					return sum + parseFloat((current.quantity * current.price).toFixed(2))
-				}, 0)
-				.toFixed(2)
-		)
-	}
 
 	return (
 		<section className='checkout'>
