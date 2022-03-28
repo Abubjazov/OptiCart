@@ -1,11 +1,14 @@
 @import '../../variables';
 
 .cart-page {
-	padding-top: 5px;
 	background: $gray;
+	padding: 5px 0;
+
+	.container {
+		min-height: calc(100vh - 290px);
+	}
 
 	.cart {
-		min-height: calc(100vh - 290px);
 		display: grid;
 		grid-template-columns: 1fr;
 		row-gap: 15px;
@@ -15,7 +18,7 @@
 	.total {
 		padding: 0 100px;
 		display: flex;
-		margin-top: 20px;
+		margin-top: 5px;
 		background: $white;
 		justify-content: end;
 	}

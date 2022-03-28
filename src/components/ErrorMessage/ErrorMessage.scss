@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.error-message {
+	margin-top: 30px;
+
+	p {
+		color: $deep-main;
+		font-size: 90px;
+		font-weight: 900;
+		margin-bottom: 10px;
+	}
+}

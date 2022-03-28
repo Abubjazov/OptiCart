@@ -1,6 +1,8 @@
 @import '../../variables';
 
 .message {
+	margin-top: 30px;
+
 	h2 {
 		color: $main-color;
 		font-size: 90px;
@@ -10,7 +12,7 @@
 
 	.link {
 		display: block;
-		margin-top: 70px;
+		margin-top: 100px;
 		color: $black;
 		text-decoration: none;
 		transition: all 0.1s linear;

@@ -1,58 +1,68 @@
 import { nanoid } from 'nanoid'
-import { useEffect, useState } from 'react'
+import { FC, useEffect } from 'react'
 
-import { CartItem, Checkout, Message, Spinner } from '../../components'
+import {
+	CartItem,
+	Checkout,
+	ErrorMessage,
+	Message,
+	Spinner,
+} from '../../components'
+import { useActions } from '../../hooks/useActions'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { CartListItem } from '../../interfaces'
-import { getCart } from '../../services/OptiCartService'
 
 import './CartPage.scss'
 
-export const CartPage = (): JSX.Element => {
-	const [cart, setCart] = useState<CartListItem[]>([])
-	const [loading, setLoading] = useState<boolean>(false)
+export const CartPage: FC = (): JSX.Element => {
+	const { status, currentItemId, error, cart } = useTypedSelector(
+		state => state.cart
+	)
+	const { fetchCart } = useActions()
 
 	useEffect(() => {
-		updateCart()
+		fetchCart()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	const updateCart = (nospinner: boolean = false) => {
-		!nospinner && setLoading(true)
+	if (status === 'loading' && currentItemId === null) {
+		return (
+			<main className='cart-page'>
+				<div className='container'>
+					<div className='cart'>
+						<Spinner />
+					</div>
+				</div>
+			</main>
+		)
+	}
 
-		getCart()
-			.then(result => setCart(result))
-			.then(() => setLoading(false))
+	if (status === 'error') {
+		return (
+			<main>
+				<ErrorMessage error={error} />
+			</main>
+		)
 	}
 
 	return (
 		<main className='cart-page'>
 			<div className='container'>
 				<div className='cart'>
-					{loading && <Spinner />}
-					{!loading ? (
-						cart.length > 0 ? (
-							cart.map(
-								({ id, name, picture, description, price, quantity }) => (
-									<CartItem
-										key={nanoid()}
-										id={id}
-										name={name}
-										picture={picture}
-										description={description}
-										price={price}
-										quantity={quantity}
-										updateCart={updateCart}
-									/>
-								)
-							)
-						) : (
-							<Message />
-						)
-					) : null}
+					{cart.length > 0 ? (
+						cart
+							.map((item: CartListItem) => (
+								<CartItem key={nanoid()} {...item} />
+							))
+							.reverse()
+					) : (
+						<Message />
+					)}
 				</div>
 			</div>
 
 			<div className='total'>
-				<Checkout cartData={cart} />
+				<Checkout />
 			</div>
 		</main>
 	)

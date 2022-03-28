@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './Message.scss'
 
-export const Message = () => (
+export const Message = (): JSX.Element => (
 	<div className='message'>
 		<h2>There are no sneakers in your cart yet!!! )</h2>
 
