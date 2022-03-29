@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ErrorGif 1`] = `
+<DocumentFragment>
+  <img
+    alt="An error has occurred"
+    src="error.gif"
+    style="display: block; width: 250px; height: 250px; object-fit: contain; margin: 0px auto;"
+  />
+</DocumentFragment>
+`;

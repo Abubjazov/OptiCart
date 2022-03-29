@@ -2,16 +2,11 @@ import { render, screen } from '@testing-library/react'
 
 import { ProductCard } from './ProductCard'
 
-const product = {
-	id: 1,
-	name: 'Air 1',
-	picture: 'https://i.ibb.co/Y281B6p/nike9.webp',
-	description: 'Qui animi et ullam dignissimos.',
-	price: 12.32,
-}
+import { mockProducts } from '../../mockData/mockData'
 
-test('renders ProductCard', () => {
-	render(<ProductCard {...product} />)
-	const linkElement = screen.getByText(/Air 1/i)
+test('ProductCard renders', () => {
+	render(<ProductCard {...mockProducts[0]} />)
+
+	const linkElement = screen.getByText(/Rangoto Vi/i)
 	expect(linkElement).toBeInTheDocument()
 })
