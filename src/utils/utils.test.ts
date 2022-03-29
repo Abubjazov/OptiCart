@@ -1,5 +1,6 @@
-import { cartItems } from '../mockData/mockData'
 import { fullPrice, getTotal } from './utils'
+
+import { mockCartItems } from '../mockData/mockData'
 
 describe('utils/fullPrice()', () => {
 	test('Positive: calculates the total price and returns a string of the format "dd,dd"', () => {
@@ -13,6 +14,6 @@ describe('utils/fullPrice()', () => {
 
 describe('utils/getTotal()', () => {
 	test('Positive: calculates the total price of all Cart and returns a string of the format "dd,dd"', () => {
-		expect(getTotal(cartItems)).toBe('102.56')
+		expect(getTotal(mockCartItems)).toBe('102.56')
 	})
 })
