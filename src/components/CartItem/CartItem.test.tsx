@@ -1,17 +1,15 @@
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
 
+import { mockCartItems } from '../../mockData/mockData'
 import { store } from '../../store'
-import { CartPage } from './CartPage'
+import { CartItem } from './CartItem'
 
-describe('Component: CartPage', () => {
-	test('should render CartPage', () => {
+describe('Component: CartItem', () => {
+	test('should render CartItem', () => {
 		const { asFragment } = render(
 			<Provider store={store}>
-				<BrowserRouter>
-					<CartPage />
-				</BrowserRouter>
+				<CartItem {...mockCartItems[0]} />
 			</Provider>
 		)
 		expect(asFragment()).toMatchSnapshot()

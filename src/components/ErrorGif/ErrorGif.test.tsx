@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+
 import { ErrorGif } from './ErrorGif'
 
 describe('Component: ErrorGif', () => {

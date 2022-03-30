@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ProductCard should render ProductCard 1`] = `
+<DocumentFragment>
+  <article
+    class="product"
+  >
+    <header>
+      <img
+        alt="Rangoto Vi"
+        src="https://i.ibb.co/T2XSnw0/z9.webp"
+      />
+    </header>
+    <div
+      class="product-descriptor"
+    >
+      <h2>
+        Rangoto Vi
+      </h2>
+      Nemo dolore officia est natus.
+    </div>
+    <footer>
+      11.04 $
+      <button>
+        Add to cart
+      </button>
+    </footer>
+  </article>
+</DocumentFragment>
+`;

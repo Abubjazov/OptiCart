@@ -1,12 +1,18 @@
-import { render, screen } from '@testing-library/react'
-
-import { ProductCard } from './ProductCard'
+import { render } from '@testing-library/react'
+import { Provider } from 'react-redux'
 
 import { mockProducts } from '../../mockData/mockData'
+import { store } from '../../store'
+import { ProductCard } from './ProductCard'
 
-test('ProductCard renders', () => {
-	render(<ProductCard {...mockProducts[0]} />)
+describe('Component: ProductCard', () => {
+	test('should render ProductCard', () => {
+		const { asFragment } = render(
+			<Provider store={store}>
+				<ProductCard {...mockProducts[0]} />
+			</Provider>
+		)
 
-	const linkElement = screen.getByText(/Rangoto Vi/i)
-	expect(linkElement).toBeInTheDocument()
+		expect(asFragment()).toMatchSnapshot()
+	})
 })
