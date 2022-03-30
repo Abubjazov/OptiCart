@@ -1,6 +1,5 @@
 import { nanoid } from 'nanoid'
-import { FC, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 import { ErrorMessage, ProductCard, Spinner } from '../../components'
 import { useActions } from '../../hooks/useActions'
@@ -9,7 +8,7 @@ import { Product } from '../../interfaces/product.interface'
 
 import './MainPage.scss'
 
-export const MainPage: FC = (): JSX.Element => {
+export const MainPage = (): JSX.Element => {
 	const { status, currentProductId, error, products } = useTypedSelector(
 		state => state.product
 	)

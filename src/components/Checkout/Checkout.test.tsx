@@ -1,17 +1,14 @@
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
 
 import { store } from '../../store'
-import { CartPage } from './CartPage'
+import { Checkout } from './Checkout'
 
-describe('Component: CartPage', () => {
-	test('should render CartPage', () => {
+describe('Component: CartItem', () => {
+	test('should render CartItem', () => {
 		const { asFragment } = render(
 			<Provider store={store}>
-				<BrowserRouter>
-					<CartPage />
-				</BrowserRouter>
+				<Checkout />
 			</Provider>
 		)
 		expect(asFragment()).toMatchSnapshot()

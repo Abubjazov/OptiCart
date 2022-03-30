@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CartItem should render CartItem 1`] = `
+<DocumentFragment>
+  <section
+    class="checkout"
+  >
+    <h2>
+      <div
+        class="wrapper"
+      >
+        Total: 0.00 $
+      </div>
+    </h2>
+    <button>
+      Checkout
+    </button>
+  </section>
+</DocumentFragment>
+`;

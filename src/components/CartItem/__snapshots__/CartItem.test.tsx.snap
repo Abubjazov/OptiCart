@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CartItem should render CartItem 1`] = `
+<DocumentFragment>
+  <article
+    class="cartitem"
+  >
+    <header>
+      <img
+        alt="Rangoto Vi"
+        src="https://i.ibb.co/T2XSnw0/z9.webp"
+      />
+      <button>
+        Remove product
+      </button>
+    </header>
+    <div
+      class="cartitem-descriptor"
+    >
+      <h2>
+        Rangoto Vi
+      </h2>
+      Nemo dolore officia est natus.
+    </div>
+    <footer>
+      <div
+        class="quantity"
+      >
+        <button
+          class="quantity-minus"
+        >
+          -
+        </button>
+        <span
+          class="quantity-value"
+        >
+          3
+        </span>
+        <button
+          class="quantity-plus"
+        >
+          +
+        </button>
+      </div>
+      <h3
+        class="price"
+      >
+        11.04 $
+      </h3>
+      <h3
+        class="full-price"
+      >
+        <div
+          class="wrapper"
+        >
+          33.12 $
+        </div>
+      </h3>
+    </footer>
+  </article>
+</DocumentFragment>
+`;

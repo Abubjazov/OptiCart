@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid'
-import { FC, useEffect } from 'react'
+import { useEffect } from 'react'
 
 import {
 	CartItem,
@@ -14,7 +14,7 @@ import { CartListItem } from '../../interfaces'
 
 import './CartPage.scss'
 
-export const CartPage: FC = (): JSX.Element => {
+export const CartPage = (): JSX.Element => {
 	const { status, currentItemId, error, cart } = useTypedSelector(
 		state => state.cart
 	)
