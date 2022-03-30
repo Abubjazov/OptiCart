@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ErrorMessage should render ErrorMessage 1`] = `
+<DocumentFragment>
+  <div
+    class="error-message"
+  >
+    <p
+      style="text-align: center; font-weight: 300; font-size: 24px;"
+    >
+      Test Error String
+    </p>
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+      style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(66, 145, 136);"
+    >
+      Back to main page
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders ErrorMessage 1`] = `
+<DocumentFragment>
+  <div
+    class="error-message"
+  >
+    <p
+      style="text-align: center; font-weight: 300; font-size: 24px;"
+    >
+      Test Error String
+    </p>
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+      style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(66, 145, 136);"
+    >
+      Back to main page
+    </a>
+  </div>
+</DocumentFragment>
+`;
