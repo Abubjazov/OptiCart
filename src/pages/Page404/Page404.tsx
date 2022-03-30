@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
-import { ErrorGif } from '../components'
+import { ErrorGif } from '../../components'
 
-export const Page404: FC = (): JSX.Element => (
+export const Page404 = (): JSX.Element => (
 	<main>
 		<ErrorGif />
 		<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
