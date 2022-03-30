@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MainPage should render MainPage 1`] = `
+<DocumentFragment>
+  <main>
+    <img
+      alt="An error has occurred"
+      src="error.gif"
+      style="display: block; width: 250px; height: 250px; object-fit: contain; margin: 0px auto;"
+    />
+    <p
+      style="text-align: center; font-weight: 300; font-size: 24px;"
+    >
+      Page doesn't exist
+    </p>
+    <a
+      href="/"
+      style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(66, 145, 136);"
+    >
+      Back to main page
+    </a>
+  </main>
+</DocumentFragment>
+`;
