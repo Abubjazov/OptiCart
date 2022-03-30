@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Header should render Header 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <h1>
+      sneakers. 
+      <span>
+        [
+      </span>
+       
+      <a
+        href="https://optimax.dev"
+        rel="noreferrer"
+        target="_blank"
+      >
+        https://optimax.dev
+      </a>
+       
+      <span
+        class="last-span"
+      >
+        ]
+      </span>
+    </h1>
+    <nav
+      class="header-menu"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            style="color: rgb(83, 181, 170);"
+          >
+            Main
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/cart"
+          >
+            Cart
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
