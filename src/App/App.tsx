@@ -1,10 +1,9 @@
-import { FC } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { Header } from '../components'
 import { CartPage, MainPage, Page404 } from '../pages'
 
-export const App: FC = (): JSX.Element => {
+export const App = (): JSX.Element => {
 	return (
 		<BrowserRouter>
 			<Header />
