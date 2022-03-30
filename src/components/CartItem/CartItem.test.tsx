@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
-import { mockCartItems } from '../../mockData/mockData'
 import { store } from '../../store'
+import { mockCartItems } from '../../mockData/mockData'
 import { CartItem } from './CartItem'
 
 describe('Component: CartItem', () => {
@@ -12,6 +12,7 @@ describe('Component: CartItem', () => {
 				<CartItem {...mockCartItems[0]} />
 			</Provider>
 		)
+
 		expect(asFragment()).toMatchSnapshot()
 	})
 })
