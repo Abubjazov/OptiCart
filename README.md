@@ -19,7 +19,7 @@ Currently application has 2 implemented sections:
 ```
 React
 React Router
-Redux Toolkit
+Redux Thunk
 TypeScript
 Axios
 SASS
@@ -32,18 +32,18 @@ SASS
 ## Quick Start
 
 ```
-yarn install
-yarn start
+npm install
+npm start
 ```
 
 ## Running of tests
 
 ```
-yarn test
+npm run test
 ```
 
 ## Deployment
 
 ```
-yarn deploy
+npm run deploy
 ```
