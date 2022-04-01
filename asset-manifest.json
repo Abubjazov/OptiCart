@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/optiCart/static/css/main.40684d6b.css",
-    "main.js": "/optiCart/static/js/main.de762ec6.js",
-    "static/media/error.gif": "/optiCart/static/media/error.42292aa12b6bc303ce99.gif",
-    "index.html": "/optiCart/index.html",
-    "main.40684d6b.css.map": "/optiCart/static/css/main.40684d6b.css.map",
-    "main.de762ec6.js.map": "/optiCart/static/js/main.de762ec6.js.map"
+    "main.css": "/static/css/main.4c2fd672.css",
+    "main.js": "/static/js/main.0046bab8.js",
+    "static/media/error.gif": "/static/media/error.42292aa12b6bc303ce99.gif",
+    "index.html": "/index.html",
+    "main.4c2fd672.css.map": "/static/css/main.4c2fd672.css.map",
+    "main.0046bab8.js.map": "/static/js/main.0046bab8.js.map"
   },
   "entrypoints": [
-    "static/css/main.40684d6b.css",
-    "static/js/main.de762ec6.js"
+    "static/css/main.4c2fd672.css",
+    "static/js/main.0046bab8.js"
   ]
 }
