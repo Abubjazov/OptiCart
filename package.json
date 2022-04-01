@@ -2,7 +2,7 @@
 	"name": "opticart",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://abubjazov.github.io/",
+	"homepage": "https://abubjazov.github.io/optiCart/",
 	"dependencies": {
 		"@redux-devtools/extension": "^3.2.2",
 		"@reduxjs/toolkit": "^1.8.0",

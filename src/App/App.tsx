@@ -8,8 +8,8 @@ export const App = (): JSX.Element => {
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path='/' element={<MainPage />} />
-				<Route path='/cart' element={<CartPage />} />
+				<Route path='/optiCart/' element={<MainPage />} />
+				<Route path='/optiCart/cart' element={<CartPage />} />
 				<Route path='*' element={<Page404 />} />
 			</Routes>
 		</BrowserRouter>
