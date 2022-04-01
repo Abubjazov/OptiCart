@@ -5,6 +5,7 @@ Simple online Shopping application based on React, Redux and Typescript.
 **Demo:**
 
 Github Pages: https://abubjazov.github.io/optiCart/
+
 Heroku: https://opticart13.herokuapp.com/
 
 Currently application has 2 implemented sections:
