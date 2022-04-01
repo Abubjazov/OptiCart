@@ -7,7 +7,7 @@ export const ErrorMessage = ({ error }: ErrorMessageProps): JSX.Element => (
 			{error}
 		</p>
 		<NavLink
-			to='/'
+			to='/optiCart/'
 			style={{
 				display: 'block',
 				textAlign: 'center',

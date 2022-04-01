@@ -2,10 +2,11 @@
 
 .cart-page {
 	background: $gray;
-	padding: 5px 0;
 
 	.container {
-		min-height: calc(100vh - 290px);
+		padding: 11vh 0 0.3vh 0;
+		min-height: 87vh;
+		max-width: calc(100vw - 10px);
 	}
 
 	.cart {
@@ -16,18 +17,12 @@
 	}
 
 	.total {
-		padding: 0 100px;
+		height: 12vh;
+		padding: 0 3vw;
+
 		display: flex;
 		margin-top: 5px;
 		background: $white;
-		justify-content: end;
-
-		@media (max-width: 1000px) {
-			padding: 0 30px;
-		}
-	}
-
-	.spinner {
-		margin-top: 20vh;
+		justify-content: flex-end;
 	}
 }

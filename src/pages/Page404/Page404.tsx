@@ -9,7 +9,7 @@ export const Page404 = (): JSX.Element => (
 			Page doesn't exist
 		</p>
 		<Link
-			to='/'
+			to='/optiCart/'
 			style={{
 				display: 'block',
 				textAlign: 'center',

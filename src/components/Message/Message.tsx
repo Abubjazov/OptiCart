@@ -5,7 +5,7 @@ export const Message = (): JSX.Element => (
 	<div className='message'>
 		<h2>There are no sneakers in your cart yet!!! )</h2>
 
-		<NavLink className='link' end to='/'>
+		<NavLink className='link' end to='/optiCart/'>
 			Choose <span>YOURS</span>!
 		</NavLink>
 	</div>
