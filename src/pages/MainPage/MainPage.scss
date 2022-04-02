@@ -6,7 +6,7 @@
 	.container {
 		padding: 11vh 0 1vh 0;
 		min-height: 100vh;
-		max-width: calc(100vw - 10px);
+		max-width: calc(100vw - 2vw);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 		row-gap: 10px;
