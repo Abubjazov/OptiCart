@@ -59,10 +59,10 @@ export const CartPage = (): JSX.Element => {
 						<Message />
 					)}
 				</div>
-			</div>
 
-			<div className='total'>
-				<Checkout />
+				<div className='total'>
+					<Checkout />
+				</div>
 			</div>
 		</main>
 	)

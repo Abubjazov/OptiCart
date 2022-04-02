@@ -8,6 +8,14 @@
 		font-size: 90px;
 		font-weight: 900;
 		margin-bottom: 10px;
+
+		@media (max-width: 930px) {
+			font-size: 70px;
+		}
+
+		@media (max-width: 520px) {
+			font-size: 50px;
+		}
 	}
 
 	.link {
@@ -18,6 +26,14 @@
 		transition: all 0.1s linear;
 		font-size: 70px;
 		font-style: normal;
+
+		@media (max-width: 930px) {
+			font-size: 60px;
+		}
+
+		@media (max-width: 520px) {
+			font-size: 40px;
+		}
 
 		span {
 			color: $main-color;

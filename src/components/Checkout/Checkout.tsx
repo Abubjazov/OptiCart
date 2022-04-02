@@ -10,15 +10,11 @@ export const Checkout = (): JSX.Element => {
 
 	return (
 		<section className='checkout'>
-			<h2>
-				<div className='wrapper'>
-					{status === 'loading' ? (
-						<MediumSpinnerBlack />
-					) : (
-						`Total: ${getTotal(cart)} $`
-					)}
-				</div>
-			</h2>
+			{status === 'loading' ? (
+				<MediumSpinnerBlack />
+			) : (
+				<h2>Total: {getTotal(cart)} $</h2>
+			)}
 
 			<button>Checkout</button>
 		</section>
