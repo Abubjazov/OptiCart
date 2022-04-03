@@ -96,6 +96,10 @@
 
 		padding: 10px;
 
+		@media (max-width: 650px) {
+			padding: 0;
+		}
+
 		h2 {
 			color: $main-color;
 			font-size: 25px;
@@ -108,7 +112,7 @@
 			}
 
 			@media (max-width: 650px) {
-				margin-top: 3px;
+				margin-top: 7px;
 				text-align: center;
 			}
 		}
