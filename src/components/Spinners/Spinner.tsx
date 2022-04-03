@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-export const Spinner: FC = (): JSX.Element => {
+export const Spinner = (): JSX.Element => {
 	return (
 		<svg
 			className='spinner'

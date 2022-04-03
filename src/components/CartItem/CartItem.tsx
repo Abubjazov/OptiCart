@@ -42,10 +42,10 @@ export const CartItem = ({
 				</button>
 			</header>
 
-			<div className='cartitem-descriptor'>
+			<section className='cartitem-descriptor'>
 				<h2>{name}</h2>
-				{description}
-			</div>
+				<p>{description}</p>
+			</section>
 
 			<footer>
 				<div className='quantity'>
@@ -56,7 +56,7 @@ export const CartItem = ({
 							'-'
 						)}
 					</button>
-					<span className='quantity-value'>{quantity}</span>
+					<div className='quantity-value'>{quantity}</div>
 					<button className='quantity-plus' onClick={updateQuantity}>
 						{status === 'loading' && currentItemId === id ? (
 							<SmallSpinner />
@@ -68,15 +68,13 @@ export const CartItem = ({
 
 				<h3 className='price'>{price} $</h3>
 
-				<h3 className='full-price'>
-					<div className='wrapper'>
-						{status === 'loading' && currentItemId === id ? (
-							<MediumSpinner />
-						) : (
-							`${fullPrice(quantity, price)} $`
-						)}
-					</div>
-				</h3>
+				<div className='full-price'>
+					{status === 'loading' && currentItemId === id ? (
+						<MediumSpinner />
+					) : (
+						<h3>{fullPrice(quantity, price)} $</h3>
+					)}
+				</div>
 			</footer>
 		</article>
 	)

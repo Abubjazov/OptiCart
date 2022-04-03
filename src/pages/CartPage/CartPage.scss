@@ -8,6 +8,7 @@
 		min-height: 100vh;
 		max-width: 100vw;
 		display: grid;
+		align-items: flex-start;
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			'cart'
@@ -22,7 +23,7 @@
 		grid-area: cart;
 		display: grid;
 		grid-template-columns: 1fr;
-		row-gap: 15px;
+		row-gap: 10px;
 		justify-items: center;
 		padding: 0 0 1vh 0;
 	}

@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-export const MediumSpinner: FC = (): JSX.Element => {
+export const MediumSpinner = (): JSX.Element => {
 	return (
 		<svg
 			className='small-spinner'
