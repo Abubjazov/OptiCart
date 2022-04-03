@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => (
 					<NavLink
 						end
 						to='/optiCart/'
-						style={({ isActive }) => ({ color: isActive ? '#53b5aa' : '' })}
+						style={({ isActive }) => ({ color: isActive ? '#3b8079' : '' })}
 					>
 						Main
 					</NavLink>
@@ -26,7 +26,7 @@ export const Header = (): JSX.Element => (
 				<li>
 					<NavLink
 						to='/optiCart/cart'
-						style={({ isActive }) => ({ color: isActive ? '#53b5aa' : '' })}
+						style={({ isActive }) => ({ color: isActive ? '#3b8079' : '' })}
 					>
 						Cart
 					</NavLink>

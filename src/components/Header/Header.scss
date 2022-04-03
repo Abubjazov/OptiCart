@@ -2,7 +2,8 @@
 
 .header {
 	position: fixed;
-	background: #fff;
+	top: 0;
+	background: $white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -22,11 +23,11 @@
 		position: relative;
 
 		span {
-			color: #53b5aa;
+			color: $main-color;
 		}
 
 		.last-span {
-			background: #fff;
+			background: $white;
 			padding-right: 150px;
 			position: absolute;
 			left: 155px;
