@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react'
+
+import { Spinner } from './Spinner'
 import { MediumSpinner } from './MediumSpinner'
 import { MediumSpinnerBlack } from './MediumSpinnerBlack'
 import { SmallSpinner } from './SmallSpinner'
 
-import { Spinner } from './Spinner'
-
-describe('Component: Header', () => {
-	test('should render Header', () => {
+describe('Component: Spinner', () => {
+	test('should render Spinners', () => {
 		const { asFragment } = render(
 			<>
 				<SmallSpinner />

@@ -1,25 +1,28 @@
 @import '../../variables';
 
 .cartitem {
-	width: 980px;
+	max-width: 980px;
+	width: 99%;
 	height: 250px;
+
 	display: grid;
-	column-gap: 10px;
-	row-gap: 5px;
+	gap: 5px;
 	grid-template-columns: 250px 1fr;
+	grid-template-rows: 1fr 50px;
 	grid-template-areas:
-		'header content'
+		'header descriptor'
 		'header footer';
 
-	@media (max-width: 1000px) {
-		width: 98%;
+	@media (max-width: 900px) {
 		height: 200px;
 		grid-template-columns: 200px 1fr;
 	}
 
-	@media (max-width: 930px) {
-		height: 150px;
-		grid-template-columns: 150px 1fr;
+	@media (max-width: 650px) {
+		max-width: 355px;
+		height: 180px;
+		grid-template-columns: 180px 170px;
+		grid-template-rows: 35px 140px;
 	}
 
 	header {
@@ -29,17 +32,15 @@
 		position: relative;
 		overflow: hidden;
 		background: $black;
-		border: 1px solid $gray-light;
-		border-style: none none solid none;
 
-		@media (max-width: 1000px) {
-			width: 200px;
+		@media (max-width: 900px) {
 			height: 200px;
+			width: 200px;
 		}
 
-		@media (max-width: 930px) {
-			width: 150px;
-			height: 150px;
+		@media (max-width: 650px) {
+			height: 180px;
+			width: 180px;
 		}
 
 		img {
@@ -49,8 +50,8 @@
 
 		button {
 			position: absolute;
-			bottom: -50px;
-			right: 0;
+			bottom: -15%;
+			width: 100%;
 			left: 0;
 			padding: 7px 30px;
 			border: none;
@@ -62,15 +63,15 @@
 			cursor: pointer;
 			transition: all 0.3s linear;
 
-			@media (max-width: 1000px) and (orientation: landscape) {
-				font-size: 18px;
-				line-height: 18px;
+			@media (max-width: 900px) {
+				font-size: 20px;
+				line-height: 20px;
+				padding: 8px 25px;
+				bottom: -18%;
 			}
 
-			@media (max-width: 930px) {
-				font-size: 14px;
-				line-height: 14px;
-				padding: 7px 15px;
+			@media (max-width: 650px) {
+				bottom: -32%;
 			}
 		}
 
@@ -80,98 +81,110 @@
 			}
 
 			button {
-				bottom: 110px;
+				bottom: 43%;
 
-				@media (max-width: 1000px) {
-					bottom: 85px;
-				}
-
-				@media (max-width: 930px) {
-					bottom: 60px;
+				@media (max-width: 650px) {
+					bottom: 35%;
 				}
 			}
 		}
 	}
 
 	.cartitem-descriptor {
-		padding: 20px;
-		grid-area: content;
-		height: 195px;
+		grid-area: descriptor;
 		background: $white;
-		border: 1px solid $gray-light;
-		border-style: none none solid none;
 
-		@media (max-width: 1000px) and (orientation: landscape) {
-			height: 145px;
-		}
-
-		@media (max-width: 930px) {
-			padding: 5px 10px;
-			height: 100px;
-		}
+		padding: 10px;
 
 		h2 {
 			color: $main-color;
 			font-size: 25px;
+			line-height: 25px;
 			font-weight: 300;
-			margin-bottom: 10px;
 
-			@media (max-width: 1000px) {
-				font-size: 20px;
+			@media (max-width: 900px) {
+				font-size: 21px;
+				line-height: 21px;
 			}
 
-			@media (max-width: 930px) {
-				font-size: 18px;
-				margin-bottom: 0;
+			@media (max-width: 650px) {
+				margin-top: 3px;
+				text-align: center;
+			}
+		}
+
+		p {
+			margin-top: 10px;
+
+			@media (max-width: 650px) {
+				display: none;
 			}
 		}
 	}
 
 	footer {
 		grid-area: footer;
+		background: $white;
+
 		display: grid;
 		grid-template-columns: 1fr auto auto;
-		height: 50px;
-		background: $white;
-		border: 1px solid $gray-light;
-		border-style: none none solid none;
+		align-items: center;
 
-		@media (max-width: 930px) {
-			height: 45px;
+		@media (max-width: 650px) {
+			align-items: flex-start;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 1fr);
 		}
 
-		.wrapper {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 22px;
-			width: 100px;
+		.price {
+			background: $white;
+			color: $black;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 18px;
+			margin: 0 15px;
 
-			@media (max-width: 930px) {
-				height: 15px;
-				width: 90px;
+			@media (max-width: 650px) {
+				margin-top: 10px;
+				text-align: center;
+			}
+		}
+
+		.full-price {
+			height: 100%;
+			width: 150px;
+			background-color: $main-color;
+			text-align: center;
+			align-self: center;
+
+			@media (max-width: 650px) {
+				height: 50px;
+				width: 100%;
+			}
+
+			h3 {
+				padding: 13px 0;
+				color: $white;
+				font-size: 22px;
+				font-weight: 300;
+				line-height: 22px;
+			}
+
+			svg {
+				background: $main-color;
 			}
 		}
 
 		.quantity {
+			display: grid;
+			grid-template-columns: repeat(3, 60px);
+			align-items: center;
+			justify-items: center;
 			font-size: 19px;
 			line-height: 19px;
-			align-self: center;
-			justify-self: start;
 
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-
-			@media (max-width: 930px) {
-				font-size: 16px;
-				line-height: 16px;
-			}
-
-			.quantity-value {
-				// font-size: 19px;
-				font-weight: 700;
-				align-self: center;
-				justify-self: center;
+			@media (max-width: 650px) {
+				grid-template-columns: repeat(3, 1fr);
 			}
 
 			button {
@@ -179,15 +192,14 @@
 				border: none;
 				font-size: 30px;
 				line-height: 30px;
-				font-weight: 300;
 				height: 48px;
 				width: 60px;
 				transition: all 0.3s linear;
-				align-self: center;
-				justify-self: center;
 
-				@media (max-width: 930px) {
-					height: 44px;
+				@media (max-width: 650px) {
+					grid-template-columns: repeat(3, 1fr);
+					height: 45px;
+					width: 100%;
 				}
 
 				svg {
@@ -207,32 +219,6 @@
 						}
 					}
 				}
-			}
-		}
-
-		.price {
-			background: $white;
-			color: $black;
-			font-size: 18px;
-			font-weight: 300;
-			line-height: 18px;
-			align-self: center;
-			justify-self: center;
-			margin: 0 15px;
-		}
-
-		.full-price {
-			background: $main-color;
-			color: $white;
-			font-size: 22px;
-			font-weight: 300;
-			line-height: 22px;
-			align-self: center;
-			justify-self: center;
-			padding: 14px;
-
-			@media (max-width: 930px) {
-				font-size: 20px;
 			}
 		}
 	}
