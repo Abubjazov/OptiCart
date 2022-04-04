@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/optiCart/static/css/main.45f90296.css",
-    "main.js": "/optiCart/static/js/main.5de4199e.js",
+    "main.css": "/optiCart/static/css/main.ce589499.css",
+    "main.js": "/optiCart/static/js/main.21ea2eda.js",
+    "static/css/916.1f525d32.chunk.css": "/optiCart/static/css/916.1f525d32.chunk.css",
+    "static/js/916.0b0d088a.chunk.js": "/optiCart/static/js/916.0b0d088a.chunk.js",
     "static/media/error.gif": "/optiCart/static/media/error.42292aa12b6bc303ce99.gif",
     "index.html": "/optiCart/index.html",
-    "main.45f90296.css.map": "/optiCart/static/css/main.45f90296.css.map",
-    "main.5de4199e.js.map": "/optiCart/static/js/main.5de4199e.js.map"
+    "main.ce589499.css.map": "/optiCart/static/css/main.ce589499.css.map",
+    "main.21ea2eda.js.map": "/optiCart/static/js/main.21ea2eda.js.map",
+    "916.1f525d32.chunk.css.map": "/optiCart/static/css/916.1f525d32.chunk.css.map",
+    "916.0b0d088a.chunk.js.map": "/optiCart/static/js/916.0b0d088a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45f90296.css",
-    "static/js/main.5de4199e.js"
+    "static/css/main.ce589499.css",
+    "static/js/main.21ea2eda.js"
   ]
 }
