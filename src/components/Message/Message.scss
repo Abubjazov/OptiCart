@@ -1,21 +1,20 @@
 @import '../../variables';
 
 .message {
-	margin: 30px 13px;
+	margin: 100px 13px;
 
 	h2 {
 		color: $main-color;
-		font-size: 90px;
+		font-size: 40px;
 		font-weight: 900;
-		margin-bottom: 10px;
 
-		@media (max-width: 930px) {
-			font-size: 70px;
-		}
+		// @media (max-width: 930px) {
+		// 	font-size: 70px;
+		// }
 
-		@media (max-width: 520px) {
-			font-size: 50px;
-		}
+		// @media (max-width: 520px) {
+		// 	font-size: 50px;
+		// }
 	}
 
 	.link {
@@ -24,16 +23,16 @@
 		color: $black;
 		text-decoration: none;
 		transition: all 0.1s linear;
-		font-size: 70px;
+		font-size: 30px;
 		font-style: normal;
 
-		@media (max-width: 930px) {
-			font-size: 60px;
-		}
+		// @media (max-width: 930px) {
+		// 	font-size: 60px;
+		// }
 
-		@media (max-width: 520px) {
-			font-size: 40px;
-		}
+		// @media (max-width: 520px) {
+		// 	font-size: 40px;
+		// }
 
 		span {
 			color: $main-color;
