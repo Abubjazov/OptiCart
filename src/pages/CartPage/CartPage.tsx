@@ -60,9 +60,11 @@ export const CartPage = (): JSX.Element => {
 					)}
 				</div>
 
-				<div className='total'>
-					<Checkout />
-				</div>
+				{cart.length > 0 ? (
+					<div className='total'>
+						<Checkout />
+					</div>
+				) : null}
 			</div>
 		</main>
 	)
