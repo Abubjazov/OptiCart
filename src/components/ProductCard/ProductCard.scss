@@ -5,12 +5,26 @@
 	width: 200px;
 	background-color: $white;
 
+	@media (max-width: 436px) {
+		height: 200px;
+		width: 350px;
+
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		grid-template-rows: 40px 160px;
+		grid-template-areas:
+			'image descriptor'
+			'image footer';
+	}
+
 	img {
+		grid-area: image;
 		height: 200px;
 		width: 200px;
 	}
 
 	.product-descriptor {
+		grid-area: descriptor;
 		padding: 0 10px;
 		margin-top: 10px;
 		height: 60px;
@@ -19,6 +33,10 @@
 		font-weight: 300;
 		color: $black;
 
+		@media (max-width: 436px) {
+			height: 40px;
+		}
+
 		h2 {
 			line-height: 25px;
 			font-size: 25px;
@@ -26,10 +44,21 @@
 			color: $main-color;
 			font-weight: 300;
 			margin-bottom: 5px;
+
+			@media (max-width: 436px) {
+				text-align: center;
+			}
+		}
+
+		p {
+			@media (max-width: 436px) {
+				display: none;
+			}
 		}
 	}
 
 	footer {
+		grid-area: footer;
 		display: flex;
 		justify-content: space-between;
 		margin-top: 30px;
@@ -38,9 +67,17 @@
 		background: $white;
 		color: $black;
 		font-size: 17px;
-		font-weight: 300;
 		line-height: 30px;
 		font-weight: 700;
+
+		@media (max-width: 436px) {
+			flex-direction: column;
+			text-align: center;
+			margin: 40px 0 0 0;
+			font-size: 21px;
+			line-height: 21px;
+			font-weight: 300;
+		}
 
 		button {
 			width: 90px;
@@ -50,9 +87,16 @@
 			background-color: $main-color;
 			color: $white;
 			font-size: 15px;
-			line-height: 14px;
+			line-height: 15px;
 			cursor: pointer;
 			transition: all 0.2s linear;
+
+			@media (max-width: 436px) {
+				width: 150px;
+				height: 40px;
+				font-size: 17px;
+				line-height: 17px;
+			}
 
 			&:hover {
 				background-color: $deep-main;
