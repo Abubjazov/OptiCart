@@ -48,23 +48,24 @@ export const CartPage = (): JSX.Element => {
 	return (
 		<main className='cart-page'>
 			<div className='container'>
-				<div className='cart'>
-					{cart.length > 0 ? (
-						cart
-							.map((item: CartListItem) => (
-								<CartItem key={nanoid()} {...item} />
-							))
-							.reverse()
-					) : (
-						<Message />
-					)}
-				</div>
-
 				{cart.length > 0 ? (
-					<div className='total'>
-						<Checkout />
-					</div>
-				) : null}
+					<>
+						<div className='cart'>
+							{' '}
+							{cart
+								.map((item: CartListItem) => (
+									<CartItem key={nanoid()} {...item} />
+								))
+								.reverse()}
+						</div>
+
+						<div className='total'>
+							<Checkout />
+						</div>
+					</>
+				) : (
+					<Message />
+				)}
 			</div>
 		</main>
 	)
