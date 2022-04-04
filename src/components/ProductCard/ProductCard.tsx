@@ -22,10 +22,10 @@ export const ProductCard = ({
 				<img src={picture} alt={name} />
 			</header>
 
-			<div className='product-descriptor'>
+			<section className='product-descriptor'>
 				<h2>{name}</h2>
-				{description}
-			</div>
+				<p>{description}</p>
+			</section>
 
 			<footer>
 				{price} $
