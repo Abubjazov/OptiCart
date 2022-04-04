@@ -8,10 +8,12 @@
 	@media (max-width: 436px) {
 		height: 200px;
 		width: 350px;
+		background-color: $gray;
 
 		display: grid;
 		grid-template-columns: 200px 1fr;
-		grid-template-rows: 40px 160px;
+		gap: 5px;
+		grid-template-rows: 40px 1fr;
 		grid-template-areas:
 			'image descriptor'
 			'image footer';
@@ -34,7 +36,10 @@
 		color: $black;
 
 		@media (max-width: 436px) {
+			background-color: $white;
 			height: 40px;
+			margin: 0;
+			padding: 7px 0;
 		}
 
 		h2 {
@@ -73,14 +78,15 @@
 		@media (max-width: 436px) {
 			flex-direction: column;
 			text-align: center;
-			margin: 40px 0 0 0;
-			font-size: 21px;
+			margin: 0;
+			padding-top: 40px;
+			font-size: 25px;
 			line-height: 21px;
 			font-weight: 300;
 		}
 
 		button {
-			width: 90px;
+			width: 85px;
 			height: 30px;
 			border: none;
 			padding: 0 5px;
@@ -92,10 +98,10 @@
 			transition: all 0.2s linear;
 
 			@media (max-width: 436px) {
-				width: 150px;
-				height: 40px;
-				font-size: 17px;
-				line-height: 17px;
+				width: 145px;
+				height: 50px;
+				font-size: 19px;
+				line-height: 19px;
 			}
 
 			&:hover {
