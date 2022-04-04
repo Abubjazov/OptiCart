@@ -7,14 +7,6 @@
 		color: $main-color;
 		font-size: 40px;
 		font-weight: 900;
-
-		// @media (max-width: 930px) {
-		// 	font-size: 70px;
-		// }
-
-		// @media (max-width: 520px) {
-		// 	font-size: 50px;
-		// }
 	}
 
 	.link {
@@ -24,15 +16,6 @@
 		text-decoration: none;
 		transition: all 0.1s linear;
 		font-size: 30px;
-		font-style: normal;
-
-		// @media (max-width: 930px) {
-		// 	font-size: 60px;
-		// }
-
-		// @media (max-width: 520px) {
-		// 	font-size: 40px;
-		// }
 
 		span {
 			color: $main-color;
