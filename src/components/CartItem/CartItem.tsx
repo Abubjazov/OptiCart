@@ -12,6 +12,8 @@ export const CartItem = ({
 	id,
 	name,
 	picture,
+	picture_medium,
+	picture_small,
 	description,
 	price,
 	quantity,
@@ -32,7 +34,13 @@ export const CartItem = ({
 	return (
 		<article className='cartitem'>
 			<header>
-				<img src={picture} alt={name} />
+				<picture>
+					<source media='(min-width: 901px)' srcSet={picture} />
+					<source media='(min-width: 651px)' srcSet={picture_medium} />
+					<source media='(max-width: 650px)' srcSet={picture_small} />
+					<img src={picture} alt={name} />
+				</picture>
+
 				<button onClick={() => removeFromCart(id)}>
 					{status === 'loading' && currentItemId === id ? (
 						<SmallSpinner />

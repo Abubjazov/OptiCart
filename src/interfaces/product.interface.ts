@@ -8,6 +8,8 @@ export interface Product {
 	id: number
 	name: string
 	picture: string
+	picture_medium: string
+	picture_small: string
 	description: string
 	price: number
 }
