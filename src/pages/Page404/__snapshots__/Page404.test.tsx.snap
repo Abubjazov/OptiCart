@@ -2,7 +2,9 @@
 
 exports[`Component: MainPage should render MainPage 1`] = `
 <DocumentFragment>
-  <main>
+  <main
+    style="padding-top: 100px;"
+  >
     <img
       alt="An error has occurred"
       src="error.gif"
@@ -14,8 +16,8 @@ exports[`Component: MainPage should render MainPage 1`] = `
       Page doesn't exist
     </p>
     <a
-      href="/"
-      style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(66, 145, 136);"
+      href="/optiCart/"
+      style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(59, 128, 121);"
     >
       Back to main page
     </a>

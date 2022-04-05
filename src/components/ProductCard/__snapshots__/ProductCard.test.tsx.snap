@@ -7,20 +7,24 @@ exports[`Component: ProductCard should render ProductCard 1`] = `
   >
     <header>
       <img
-        alt="Rangoto Vi"
-        src="https://i.ibb.co/T2XSnw0/z9.webp"
+        alt="Paco"
+        height="200"
+        src="https://i.ibb.co/tDLC3HD/4-200-200.webp"
+        width="200"
       />
     </header>
-    <div
+    <section
       class="product-descriptor"
     >
       <h2>
-        Rangoto Vi
+        Paco
       </h2>
-      Nemo dolore officia est natus.
-    </div>
+      <p>
+        Ab odit numquam consectetur aut.
+      </p>
+    </section>
     <footer>
-      11.04 $
+      54.5 $
       <button>
         Add to cart
       </button>
