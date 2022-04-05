@@ -7,6 +7,8 @@ export enum ProductActionTypes {
 export interface Product {
 	id: number
 	name: string
+	picture_xlarge: string
+	picture_large: string
 	picture: string
 	picture_medium: string
 	picture_small: string

@@ -12,8 +12,8 @@ export const CartItem = ({
 	id,
 	name,
 	picture,
-	picture_medium,
-	picture_small,
+	picture_xlarge,
+	picture_large,
 	description,
 	price,
 	quantity,
@@ -36,8 +36,8 @@ export const CartItem = ({
 			<header>
 				<picture>
 					<source media='(min-width: 901px)' srcSet={picture} />
-					<source media='(min-width: 651px)' srcSet={picture_medium} />
-					<source media='(max-width: 650px)' srcSet={picture_small} />
+					<source media='(min-width: 651px)' srcSet={picture_xlarge} />
+					<source media='(max-width: 650px)' srcSet={picture_large} />
 					<img src={picture} alt={name} />
 				</picture>
 
