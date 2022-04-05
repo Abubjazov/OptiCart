@@ -110,6 +110,24 @@ export const cartReducer = (
 				error: action.payload,
 			}
 
+		case CartActionTypes.CHECKOUT_CART:
+			return { ...state, status: 'loading', currentItemId: null, error: null }
+
+		case CartActionTypes.CHECKOUT_CART_SUCCESS:
+			return {
+				...state,
+				status: 'checkouted',
+				cart: [],
+				error: null,
+			}
+
+		case CartActionTypes.CHECKOUT_CART_ERROR:
+			return {
+				...state,
+				status: 'error',
+				error: action.payload,
+			}
+
 		default:
 			return state
 	}

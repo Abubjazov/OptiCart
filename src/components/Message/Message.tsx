@@ -1,12 +1,23 @@
 import { NavLink } from 'react-router-dom'
 import './Message.scss'
 
-export const Message = (): JSX.Element => (
+const defaultMessage = 'There are no sneakers in your cart yet!!! )'
+const defaultLinkText = 'Choose*YOURS!'
+
+export const Message = ({
+	message = defaultMessage,
+	linkText = defaultLinkText,
+}: MessageProps): JSX.Element => (
 	<div className='message'>
-		<h2>There are no sneakers in your cart yet!!! )</h2>
+		<h2>{message}</h2>
 
 		<NavLink className='link' end to='/optiCart/'>
-			Choose <span>YOURS</span>!
+			{linkText?.split('*')[0]} <span>{linkText?.split('*')[1]}</span>
 		</NavLink>
 	</div>
 )
+
+export interface MessageProps {
+	message?: string | null
+	linkText?: string | null
+}
