@@ -31,10 +31,8 @@ exports[`Component: Header should render Header 1`] = `
       <ul>
         <li>
           <a
-            aria-current="page"
-            class="active"
-            href="/"
-            style="color: rgb(83, 181, 170);"
+            class=""
+            href="/optiCart/"
           >
             Main
           </a>
@@ -42,7 +40,7 @@ exports[`Component: Header should render Header 1`] = `
         <li>
           <a
             class=""
-            href="/cart"
+            href="/optiCart/cart"
           >
             Cart
           </a>

@@ -9,9 +9,8 @@ exports[`Component: Header should render Header 1`] = `
       There are no sneakers in your cart yet!!! )
     </h2>
     <a
-      aria-current="page"
-      class="link active"
-      href="/"
+      class="link"
+      href="/optiCart/"
     >
       Choose 
       <span>

@@ -6,11 +6,7 @@ exports[`Component: CartItem should render CartItem 1`] = `
     class="checkout"
   >
     <h2>
-      <div
-        class="wrapper"
-      >
-        Total: 0.00 $
-      </div>
+      Total: 0.00 $
     </h2>
     <button>
       Checkout
