@@ -9,7 +9,7 @@ exports[`Component: ProductCard should render ProductCard 1`] = `
       <img
         alt="Paco"
         height="200"
-        src="https://i.ibb.co/tDLC3HD/4-200-200.webp"
+        src="https://i.ibb.co/84RrCYH/4-400-400.webp"
         width="200"
       />
     </header>
