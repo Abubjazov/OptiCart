@@ -16,6 +16,10 @@ export enum CartActionTypes {
 	UPDATE_CART_QUANTITY = 'UPDATE_CART_QUANTITY',
 	UPDATE_CART_QUANTITY_SUCCESS = 'UPDATE_CART_QUANTITY_SUCCESS',
 	UPDATE_CART_QUANTITY_ERROR = 'UPDATE_CART_QUANTITY_ERROR',
+
+	CHECKOUT_CART = 'CHECKOUT_CART',
+	CHECKOUT_CART_SUCCESS = 'CHECKOUT_CART_SUCCESS',
+	CHECKOUT_CART_ERROR = 'CHECKOUT_CART_ERROR',
 }
 
 export interface CartListItem extends Product {
@@ -26,7 +30,7 @@ export interface CartListItem extends Product {
 export interface CartState {
 	cart: CartListItem[]
 	currentItemId: null | number
-	status: 'waiting' | 'error' | 'loading'
+	status: 'waiting' | 'error' | 'loading' | 'checkouted'
 	error: null | string
 }
 
@@ -85,6 +89,17 @@ interface updateCartQuantityErrorAction {
 	payload: string
 }
 
+interface checkoutAction {
+	type: CartActionTypes.CHECKOUT_CART
+}
+interface checkoutSuccessAction {
+	type: CartActionTypes.CHECKOUT_CART_SUCCESS
+}
+interface checkoutErrorAction {
+	type: CartActionTypes.CHECKOUT_CART_ERROR
+	payload: string
+}
+
 export type CartAction =
 	| FetchCartAction
 	| FetchCartSuccessAction
@@ -98,3 +113,6 @@ export type CartAction =
 	| updateCartQuantityAction
 	| updateCartQuantitySuccessAction
 	| updateCartQuantityErrorAction
+	| checkoutAction
+	| checkoutSuccessAction
+	| checkoutErrorAction

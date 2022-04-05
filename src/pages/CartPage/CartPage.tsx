@@ -45,6 +45,19 @@ export const CartPage = (): JSX.Element => {
 		)
 	}
 
+	if (status === 'checkouted') {
+		return (
+			<main className='cart-page'>
+				<div className='container'>
+					<Message
+						message='Thank you! Your payment has been processed!'
+						linkText='Continue*Shopping'
+					/>
+				</div>
+			</main>
+		)
+	}
+
 	return (
 		<main className='cart-page'>
 			<div className='container'>

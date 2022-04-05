@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: CartItem should render CartItem 1`] = `
+exports[`Component: Checkout should render Checkout 1`] = `
 <DocumentFragment>
   <section
     class="checkout"
