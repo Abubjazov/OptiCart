@@ -9,7 +9,7 @@ import './ProductCard.scss'
 export const ProductCard = ({
 	id,
 	name,
-	picture,
+	picture_medium,
 	description,
 	price,
 }: Product): JSX.Element => {
@@ -19,7 +19,7 @@ export const ProductCard = ({
 	return (
 		<article className='product'>
 			<header>
-				<img src={picture} alt={name} />
+				<img height={200} width={200} src={picture_medium} alt={name} />
 			</header>
 
 			<section className='product-descriptor'>
