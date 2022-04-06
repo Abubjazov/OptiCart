@@ -6,7 +6,9 @@ export const ErrorMessage = ({ error }: ErrorMessageProps): JSX.Element => (
 	<div className='error-message'>
 		<p>{error}</p>
 
-		<NavLink to='/optiCart/'>Back to main page</NavLink>
+		<NavLink end to='/optiCart/'>
+			Back to main page
+		</NavLink>
 	</div>
 )
 

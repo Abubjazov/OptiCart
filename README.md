@@ -3,10 +3,9 @@
 Simple online Shopping application based on React, Redux and Typescript.
 
 **Demo:**
-
 Github Pages: https://abubjazov.github.io/optiCart/
 
-Currently application has 2 implemented sections:
+**Currently application has 2 implemented sections:**
 
 **1) Main page** - where users can add sneakers into cart.
 
@@ -18,13 +17,16 @@ Currently application has 2 implemented sections:
 
 ## Lighthouse Reports
 
-###Main page Desktop
+**Main page Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_main.jpg)
-###Main page Mobile
+<br>
+**Main page Mobile**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_mobile_main.jpg)
-###Cart page Desktop
+<br>
+**Cart page Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_cart.jpg)
-###Cart page Mobile
+<br>
+**Cart page Mobile**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_mobile_cart.jpg)
 
 ## Technology Stack
@@ -42,7 +44,7 @@ SASS
 
 ## Components Structure
 
-![LANDING](docs/components_tree.svg)
+![COMPONENTS_TREE](docs/components_tree.svg)
 
 ## Quick Start
 
