@@ -19,7 +19,7 @@ export const fetchCart = () => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.FETCH_CART_ERROR,
-				payload: `An error occurred while loading the cart!\n${error}`,
+				payload: `An error occurred while loading the cart!*${error}`,
 			})
 		}
 	}
@@ -42,7 +42,7 @@ export const addToCart = (product_id: number) => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.ADD_TO_CART_ERROR,
-				payload: `An error occurred while adding an item to the cart!\n${error}`,
+				payload: `An error occurred while adding an item to the cart!*${error}`,
 			})
 		}
 	}
@@ -64,7 +64,7 @@ export const removeFromCart = (product_id: number) => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.REMOVE_FROM_CART_ERROR,
-				payload: `An error occurred while removing an item from the cart!\n${error}`,
+				payload: `An error occurred while removing an item from the cart!*${error}`,
 			})
 		}
 	}
@@ -90,7 +90,7 @@ export const updateCartQuantity = (cartItemId: number, quantity: number) => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.UPDATE_CART_QUANTITY_ERROR,
-				payload: `An error occurred while updating an cart item quantity!\n${error}`,
+				payload: `An error occurred while updating an cart item quantity!*${error}`,
 			})
 		}
 	}
@@ -109,7 +109,7 @@ export const checkoutCart = () => {
 		} catch (error) {
 			dispatch({
 				type: CartActionTypes.CHECKOUT_CART_ERROR,
-				payload: `An error occurred while checkout!\n${error}`,
+				payload: `An error occurred while checkout!*${error}`,
 			})
 		}
 	}
