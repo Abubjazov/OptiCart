@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: PageMarker should render PageMarker 1`] = `
+<DocumentFragment>
+  <p
+    role="alert"
+    style="display: block; position: fixed; left: 100px; top: 0px; overflow: hidden; height: 0px; opacity: 1;"
+  >
+    You are on the test page
+  </p>
+</DocumentFragment>
+`;

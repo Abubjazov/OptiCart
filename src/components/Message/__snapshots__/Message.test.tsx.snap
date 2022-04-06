@@ -4,12 +4,14 @@ exports[`Component: Message should render default Message 1`] = `
 <DocumentFragment>
   <div
     class="message"
+    role="alert"
   >
-    <h2>
+    <h2
+      tabindex="0"
+    >
       There are no sneakers in your cart yet!!! )
     </h2>
     <a
-      class="link"
       href="/optiCart/"
     >
       Choose 
@@ -25,12 +27,14 @@ exports[`Component: Message should render modified Message 1`] = `
 <DocumentFragment>
   <div
     class="message"
+    role="alert"
   >
-    <h2>
+    <h2
+      tabindex="0"
+    >
       Test message
     </h2>
     <a
-      class="link"
       href="/optiCart/"
     >
       Test 

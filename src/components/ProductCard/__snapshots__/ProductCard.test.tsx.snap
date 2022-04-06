@@ -3,7 +3,9 @@
 exports[`Component: ProductCard should render ProductCard 1`] = `
 <DocumentFragment>
   <article
+    aria-label="sneakers Paco, unit price 54.5 $"
     class="product"
+    tabindex="0"
   >
     <header>
       <img
@@ -25,7 +27,9 @@ exports[`Component: ProductCard should render ProductCard 1`] = `
     </section>
     <footer>
       54.5 $
-      <button>
+      <button
+        aria-label="Add to cart sneakers Paco"
+      >
         Add to cart
       </button>
     </footer>
