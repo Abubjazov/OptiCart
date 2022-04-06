@@ -1,7 +1,12 @@
 import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
 
-import { ErrorMessage, ProductCard, Spinner } from '../../components'
+import {
+	ErrorMessage,
+	PageMarker,
+	ProductCard,
+	Spinner,
+} from '../../components'
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Product } from '../../interfaces/product.interface'
@@ -39,6 +44,8 @@ export const MainPage = (): JSX.Element => {
 
 	return (
 		<main className='main-page'>
+			<PageMarker pageName='main' />
+
 			<div className='container'>
 				{products.map((item: Product) => (
 					<ProductCard key={nanoid()} {...item} />

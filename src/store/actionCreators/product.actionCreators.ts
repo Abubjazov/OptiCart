@@ -19,7 +19,7 @@ export const fetchProducts = () => {
 		} catch (error) {
 			dispatch({
 				type: ProductActionTypes.FETCH_PRODUCTS_ERROR,
-				payload: `An error occurred while loading the products!\n${error}`,
+				payload: `An error occurred while loading the products!*${error}`,
 			})
 		}
 	}

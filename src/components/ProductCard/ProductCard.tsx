@@ -17,7 +17,11 @@ export const ProductCard = ({
 	const { addToCart } = useActions()
 
 	return (
-		<article className='product'>
+		<article
+			tabIndex={0}
+			aria-label={`sneakers ${name}, unit price ${price} $`}
+			className='product'
+		>
 			<header>
 				<img height={200} width={200} src={picture_xlarge} alt={name} />
 			</header>
@@ -29,7 +33,10 @@ export const ProductCard = ({
 
 			<footer>
 				{price} $
-				<button onClick={() => addToCart(id)}>
+				<button
+					aria-label={`Add to cart sneakers ${name}`}
+					onClick={() => addToCart(id)}
+				>
 					{status === 'loading' && currentItemId === id ? (
 						<SmallSpinner />
 					) : (

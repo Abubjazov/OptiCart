@@ -10,15 +10,24 @@ export const Checkout = (): JSX.Element => {
 	const { cart, status } = useTypedSelector(state => state.cart)
 	const { checkoutCart } = useActions()
 
+	const totalPrice = getTotal(cart)
+
 	return (
 		<section className='checkout'>
 			{status === 'loading' ? (
 				<MediumSpinnerBlack />
 			) : (
-				<h2>Total: {getTotal(cart)} $</h2>
+				<h2
+					aria-label={`Final price of the entire order is ${totalPrice}`}
+					tabIndex={0}
+				>
+					Total: {totalPrice} $
+				</h2>
 			)}
 
-			<button onClick={checkoutCart}>Checkout</button>
+			<button aria-label={`Checkout order`} onClick={checkoutCart}>
+				Checkout
+			</button>
 		</section>
 	)
 }

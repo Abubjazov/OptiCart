@@ -6,6 +6,7 @@ import {
 	Checkout,
 	ErrorMessage,
 	Message,
+	PageMarker,
 	Spinner,
 } from '../../components'
 import { useActions } from '../../hooks/useActions'
@@ -60,6 +61,8 @@ export const CartPage = (): JSX.Element => {
 
 	return (
 		<main className='cart-page'>
+			<PageMarker pageName='cart' />
+
 			<div className='container'>
 				{cart.length > 0 ? (
 					<>
