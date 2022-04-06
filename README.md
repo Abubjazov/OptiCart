@@ -16,6 +16,17 @@ Currently application has 2 implemented sections:
 
 ![LANDING](docs/cart.jpg)
 
+## Lighthouse Reports
+
+###Main page Desktop
+![LIGHTHOUSE_REPORT](docs/lighthouse_main.jpg)
+###Main page Mobile
+![LIGHTHOUSE_REPORT](docs/lighthouse_mobile_main.jpg)
+###Cart page Desktop
+![LIGHTHOUSE_REPORT](docs/lighthouse_cart.jpg)
+###Cart page Mobile
+![LIGHTHOUSE_REPORT](docs/lighthouse_mobile_cart.jpg)
+
 ## Technology Stack
 
 ```
@@ -31,7 +42,7 @@ SASS
 
 ## Components Structure
 
-![LANDING](docs/components_tree.png)
+![LANDING](docs/components_tree.svg)
 
 ## Quick Start
 
