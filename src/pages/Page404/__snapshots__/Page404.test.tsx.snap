@@ -11,12 +11,15 @@ exports[`Component: MainPage should render MainPage 1`] = `
       style="display: block; width: 250px; height: 250px; object-fit: contain; margin: 0px auto;"
     />
     <p
+      role="alert"
       style="text-align: center; font-weight: 300; font-size: 24px;"
+      tabindex="0"
     >
       Page doesn't exist
     </p>
     <a
       href="/optiCart/"
+      role="alert"
       style="display: block; text-align: center; font-weight: 300; font-size: 24px; margin-top: 13px; color: rgb(59, 128, 121);"
     >
       Back to main page

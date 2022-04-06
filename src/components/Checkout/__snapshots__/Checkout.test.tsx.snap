@@ -5,10 +5,15 @@ exports[`Component: Checkout should render Checkout 1`] = `
   <section
     class="checkout"
   >
-    <h2>
+    <h2
+      aria-label="Final price of the entire order is 0.00"
+      tabindex="0"
+    >
       Total: 0.00 $
     </h2>
-    <button>
+    <button
+      aria-label="Checkout order"
+    >
       Checkout
     </button>
   </section>

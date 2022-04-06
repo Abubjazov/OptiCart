@@ -14,6 +14,7 @@ exports[`Component: App should render App 1`] = `
       <a
         href="https://optimax.dev"
         rel="noreferrer"
+        tabindex="-1"
         target="_blank"
       >
         https://optimax.dev
@@ -31,6 +32,7 @@ exports[`Component: App should render App 1`] = `
       <ul>
         <li>
           <a
+            aria-label="Go to main page"
             class=""
             href="/optiCart/"
           >
@@ -39,6 +41,7 @@ exports[`Component: App should render App 1`] = `
         </li>
         <li>
           <a
+            aria-label="Go to cart page"
             class=""
             href="/optiCart/cart"
           >
