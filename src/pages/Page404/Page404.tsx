@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 import { ErrorGif } from '../../components'
 
 export const Page404 = (): JSX.Element => (
@@ -9,11 +7,16 @@ export const Page404 = (): JSX.Element => (
 		}}
 	>
 		<ErrorGif />
-		<p style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}>
+		<p
+			tabIndex={0}
+			role='alert'
+			style={{ textAlign: 'center', fontWeight: 300, fontSize: 24 }}
+		>
 			Page doesn't exist
 		</p>
-		<Link
-			to='/optiCart/'
+		<a
+			href='/optiCart/'
+			role='alert'
 			style={{
 				display: 'block',
 				textAlign: 'center',
@@ -24,6 +27,6 @@ export const Page404 = (): JSX.Element => (
 			}}
 		>
 			Back to main page
-		</Link>
+		</a>
 	</main>
 )

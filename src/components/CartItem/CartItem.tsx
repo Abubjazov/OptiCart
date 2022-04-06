@@ -21,6 +21,8 @@ export const CartItem = ({
 	const { currentItemId, status } = useTypedSelector(state => state.cart)
 	const { removeFromCart, updateCartQuantity } = useActions()
 
+	const fullprice = fullPrice(quantity, price)
+
 	const updateQuantity = (e: any) => {
 		if (e.target.classList.contains('quantity-minus')) {
 			quantity > 1 ? updateCartQuantity(id, quantity - 1) : removeFromCart(id)
@@ -32,7 +34,11 @@ export const CartItem = ({
 	}
 
 	return (
-		<article className='cartitem'>
+		<article
+			tabIndex={0}
+			className='cartitem'
+			aria-label={`Sneakers ${name} in your cart, unit price ${price} $, quantity ${quantity}`}
+		>
 			<header>
 				<picture>
 					<source media='(min-width: 901px)' srcSet={picture} />
@@ -41,7 +47,10 @@ export const CartItem = ({
 					<img src={picture} alt={name} />
 				</picture>
 
-				<button onClick={() => removeFromCart(id)}>
+				<button
+					aria-label={`Remove sneakers ${name} from cart`}
+					onClick={() => removeFromCart(id)}
+				>
 					{status === 'loading' && currentItemId === id ? (
 						<SmallSpinner />
 					) : (
@@ -57,15 +66,29 @@ export const CartItem = ({
 
 			<footer>
 				<div className='quantity'>
-					<button className='quantity-minus' onClick={updateQuantity}>
+					<button
+						aria-label={`Reduce the quantity of ${name} by one`}
+						className='quantity-minus'
+						onClick={updateQuantity}
+					>
 						{status === 'loading' && currentItemId === id ? (
 							<SmallSpinner />
 						) : (
 							'-'
 						)}
 					</button>
-					<div className='quantity-value'>{quantity}</div>
-					<button className='quantity-plus' onClick={updateQuantity}>
+					<div
+						aria-label={`Quantity of product ${name} is ${quantity}`}
+						tabIndex={0}
+						className='quantity-value'
+					>
+						{quantity}
+					</div>
+					<button
+						aria-label={`Increase the quantity of ${name} by one`}
+						className='quantity-plus'
+						onClick={updateQuantity}
+					>
 						{status === 'loading' && currentItemId === id ? (
 							<SmallSpinner />
 						) : (
@@ -74,13 +97,24 @@ export const CartItem = ({
 					</button>
 				</div>
 
-				<h3 className='price'>{price} $</h3>
+				<h3
+					aria-label={`Sneakers ${name} unit price is ${price} $`}
+					tabIndex={0}
+					className='price'
+				>
+					{price} $
+				</h3>
 
 				<div className='full-price'>
 					{status === 'loading' && currentItemId === id ? (
 						<MediumSpinner />
 					) : (
-						<h3>{fullPrice(quantity, price)} $</h3>
+						<h3
+							aria-label={`Total price of the ordered sneakers ${name} is ${fullprice} $`}
+							tabIndex={0}
+						>
+							{fullprice} $
+						</h3>
 					)}
 				</div>
 			</footer>
