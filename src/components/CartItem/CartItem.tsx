@@ -77,13 +77,14 @@ export const CartItem = ({
 							'-'
 						)}
 					</button>
-					<div
+					<h3
 						aria-label={`Quantity of product ${name} is ${quantity}`}
 						tabIndex={0}
 						className='quantity-value'
+						// title={`Quantity of product ${name} is`}
 					>
 						{quantity}
-					</div>
+					</h3>
 					<button
 						aria-label={`Increase the quantity of ${name} by one`}
 						className='quantity-plus'

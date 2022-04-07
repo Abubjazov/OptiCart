@@ -191,6 +191,12 @@
 				grid-template-columns: repeat(3, 1fr);
 			}
 
+			&-value {
+				font-size: 19px;
+				line-height: 19px;
+				font-weight: 300;
+			}
+
 			button {
 				background: $white;
 				border: none;
