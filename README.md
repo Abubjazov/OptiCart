@@ -15,6 +15,10 @@ Github Pages: https://abubjazov.github.io/optiCart/
 
 ![LANDING](docs/cart.jpg)
 
+**Demo video:**
+
+<iframe width="830" height="415" src="https://www.youtube.com/embed/uX-ZdWcEg4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Lighthouse Reports
 
 **Main page Desktop**
