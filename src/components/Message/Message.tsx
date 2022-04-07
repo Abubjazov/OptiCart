@@ -7,7 +7,7 @@ export const Message = ({
 	message = defaultMessage,
 	linkText = defaultLinkText,
 }: MessageProps): JSX.Element => (
-	<div role='alert' className='message'>
+	<div role='log' className='message'>
 		<h2 tabIndex={0}>{message}</h2>
 
 		<a href='/optiCart/'>
