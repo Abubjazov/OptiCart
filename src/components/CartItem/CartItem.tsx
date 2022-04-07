@@ -81,7 +81,6 @@ export const CartItem = ({
 						aria-label={`Quantity of product ${name} is ${quantity}`}
 						tabIndex={0}
 						className='quantity-value'
-						// title={`Quantity of product ${name} is`}
 					>
 						{quantity}
 					</h3>

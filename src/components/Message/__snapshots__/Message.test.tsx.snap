@@ -4,7 +4,7 @@ exports[`Component: Message should render default Message 1`] = `
 <DocumentFragment>
   <div
     class="message"
-    role="alert"
+    role="log"
   >
     <h2
       tabindex="0"
@@ -27,7 +27,7 @@ exports[`Component: Message should render modified Message 1`] = `
 <DocumentFragment>
   <div
     class="message"
-    role="alert"
+    role="log"
   >
     <h2
       tabindex="0"

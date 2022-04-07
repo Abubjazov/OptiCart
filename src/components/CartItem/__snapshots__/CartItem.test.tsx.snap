@@ -52,13 +52,13 @@ exports[`Component: CartItem should render CartItem 1`] = `
         >
           -
         </button>
-        <div
+        <h3
           aria-label="Quantity of product Paco is 1"
           class="quantity-value"
           tabindex="0"
         >
           1
-        </div>
+        </h3>
         <button
           aria-label="Increase the quantity of Paco by one"
           class="quantity-plus"
