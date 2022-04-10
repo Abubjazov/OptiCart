@@ -8,9 +8,8 @@ exports[`Component: App should render App 1`] = `
     <h1>
       sneakers. 
       <span>
-        [
+        [ 
       </span>
-       
       <a
         href="https://optimax.dev"
         rel="noreferrer"
@@ -19,7 +18,6 @@ exports[`Component: App should render App 1`] = `
       >
         https://optimax.dev
       </a>
-       
       <span
         class="last-span"
       >

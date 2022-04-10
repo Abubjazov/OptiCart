@@ -34,7 +34,7 @@ export const ProductCard = ({
 			<footer>
 				{price} $
 				<button
-					aria-label={`Add to cart sneakers ${name}`}
+					aria-label={`Add to cart ${name}`}
 					onClick={() => addToCart(id)}
 				>
 					{status === 'loading' && currentItemId === id ? (
