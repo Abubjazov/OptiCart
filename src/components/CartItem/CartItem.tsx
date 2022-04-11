@@ -48,7 +48,7 @@ export const CartItem = ({
 				</picture>
 
 				<button
-					aria-label={`Remove sneakers ${name} from cart`}
+					aria-label={`Remove ${name} from your cart`}
 					onClick={() => removeFromCart(id)}
 				>
 					{status === 'loading' && currentItemId === id ? (

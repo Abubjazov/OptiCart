@@ -28,7 +28,7 @@ exports[`Component: ProductCard should render ProductCard 1`] = `
     <footer>
       54.5 $
       <button
-        aria-label="Add to cart sneakers Paco"
+        aria-label="Add to cart Paco"
       >
         Add to cart
       </button>

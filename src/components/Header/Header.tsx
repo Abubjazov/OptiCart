@@ -5,7 +5,7 @@ import './Header.scss'
 export const Header = (): JSX.Element => (
 	<header className='header'>
 		<h1>
-			sneakers. <span>[</span>{' '}
+			sneakers. <span>[ </span>
 			<a
 				tabIndex={-1}
 				href='https://optimax.dev'
@@ -13,7 +13,7 @@ export const Header = (): JSX.Element => (
 				rel='noreferrer'
 			>
 				https://optimax.dev
-			</a>{' '}
+			</a>
 			<span className='last-span'>]</span>
 		</h1>
 
