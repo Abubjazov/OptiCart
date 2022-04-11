@@ -5,16 +5,7 @@ import './Header.scss'
 export const Header = (): JSX.Element => (
 	<header className='header'>
 		<h1>
-			sneakers. <span>[ </span>
-			<a
-				tabIndex={-1}
-				href='https://optimax.dev'
-				target='_blank'
-				rel='noreferrer'
-			>
-				https://optimax.dev
-			</a>
-			<span className='last-span'>]</span>
+			sneakers. <span>[ ]</span>
 		</h1>
 
 		<nav className='header-menu'>
