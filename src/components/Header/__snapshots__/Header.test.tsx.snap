@@ -8,20 +8,7 @@ exports[`Component: Header should render Header 1`] = `
     <h1>
       sneakers. 
       <span>
-        [ 
-      </span>
-      <a
-        href="https://optimax.dev"
-        rel="noreferrer"
-        tabindex="-1"
-        target="_blank"
-      >
-        https://optimax.dev
-      </a>
-      <span
-        class="last-span"
-      >
-        ]
+        [ ]
       </span>
     </h1>
     <nav
