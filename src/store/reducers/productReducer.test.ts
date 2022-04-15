@@ -5,7 +5,7 @@ import { initialState, productReducer } from './productReducer'
 let testData = [...mockProducts]
 
 describe('Reducer: productReducer', () => {
-	test('FETCH_PRODUCTS: should change state', () => {
+	test('FETCH_PRODUCTS: initiating the fetching of products data', () => {
 		expect(
 			productReducer(initialState, {
 				type: ProductActionTypes.FETCH_PRODUCTS,
@@ -18,7 +18,7 @@ describe('Reducer: productReducer', () => {
 		})
 	})
 
-	test('FETCH_PRODUCTS_SUCCESS: should change state', () => {
+	test('FETCH_PRODUCTS_SUCCESS: fetching of products data success', () => {
 		expect(
 			productReducer(initialState, {
 				type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS,
@@ -31,7 +31,7 @@ describe('Reducer: productReducer', () => {
 		})
 	})
 
-	test('FETCH_PRODUCTS_ERROR: should change state', () => {
+	test('FETCH_PRODUCTS_ERROR: fetching of products data error', () => {
 		expect(
 			productReducer(initialState, {
 				type: ProductActionTypes.FETCH_PRODUCTS_ERROR,

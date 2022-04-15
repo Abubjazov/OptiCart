@@ -5,7 +5,7 @@ import { initialState, cartReducer } from './cartReducer'
 let testData = [...mockCartItems]
 
 describe('Reducer: cartReducer', () => {
-	test('FETCH_CART: should change state', () => {
+	test('FETCH_CART: initiating the fetching of cart data', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.FETCH_CART,
@@ -18,7 +18,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('FETCH_CART_SUCCESS: should change state', () => {
+	test('FETCH_CART_SUCCESS: fetching of cart data success', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.FETCH_CART_SUCCESS,
@@ -31,7 +31,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('FETCH_CART_ERROR: should change state', () => {
+	test('FETCH_CART_ERROR: fetching of cart data error', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.FETCH_CART_ERROR,
@@ -44,7 +44,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('ADD_TO_CART: should change state', () => {
+	test('ADD_TO_CART: initiating adding an item to the cart', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.ADD_TO_CART,
@@ -58,7 +58,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('ADD_TO_CART_SUCCESS: should change state', () => {
+	test('ADD_TO_CART_SUCCESS: adding an item to the cart success', () => {
 		testData[0].quantity += 1
 
 		expect(
@@ -73,7 +73,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('ADD_TO_CART_ERROR: should change state', () => {
+	test('ADD_TO_CART_ERROR: adding an item to the error', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.ADD_TO_CART_ERROR,
@@ -86,7 +86,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('UPDATE_CART_QUANTITY: should change state', () => {
+	test('UPDATE_CART_QUANTITY: initiating an update of the quantity of goods in the cart', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.UPDATE_CART_QUANTITY,
@@ -100,7 +100,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('UPDATE_CART_QUANTITY_SUCCESS: should change state', () => {
+	test('UPDATE_CART_QUANTITY_SUCCESS: updating the quantity of goods in the cart success', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.UPDATE_CART_QUANTITY_SUCCESS,
@@ -118,7 +118,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('UPDATE_CART_QUANTITY_ERROR: should change state', () => {
+	test('UPDATE_CART_QUANTITY_ERROR: updating the quantity of goods in the cart error', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.UPDATE_CART_QUANTITY_ERROR,
@@ -131,7 +131,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('REMOVE_FROM_CART: should change state', () => {
+	test('REMOVE_FROM_CART: initiating removal of goods from the cart', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.REMOVE_FROM_CART,
@@ -145,7 +145,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('REMOVE_FROM_CART_SUCCESS: should change state', () => {
+	test('REMOVE_FROM_CART_SUCCESS: removing an item from the cart success', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.REMOVE_FROM_CART_SUCCESS,
@@ -158,7 +158,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('REMOVE_FROM_CART_ERROR: should change state', () => {
+	test('REMOVE_FROM_CART_ERROR: removing an item from the cart error', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.REMOVE_FROM_CART_ERROR,
@@ -171,7 +171,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('CHECKOUT_CART: should change state', () => {
+	test('CHECKOUT_CART: initiating check out cart', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.CHECKOUT_CART,
@@ -184,7 +184,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('CHECKOUT_CART_SUCCESS: should change state', () => {
+	test('CHECKOUT_CART_SUCCESS: check out cart success', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.CHECKOUT_CART_SUCCESS,
@@ -196,7 +196,7 @@ describe('Reducer: cartReducer', () => {
 		})
 	})
 
-	test('CHECKOUT_CART_ERROR: should change state', () => {
+	test('CHECKOUT_CART_ERROR: check out cart error', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.CHECKOUT_CART_ERROR,
