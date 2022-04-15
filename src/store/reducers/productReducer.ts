@@ -4,7 +4,7 @@ import {
 	ProductState,
 } from '../../interfaces'
 
-const initialState: ProductState = {
+export const initialState: ProductState = {
 	products: [],
 	currentProductId: null,
 	status: 'waiting',
