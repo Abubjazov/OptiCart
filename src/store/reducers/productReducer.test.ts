@@ -11,6 +11,8 @@ describe('Reducer: productReducer', () => {
 		).toEqual({
 			...initialState,
 			status: 'loading',
+			currentProductId: null,
+			error: null,
 		})
 	})
 

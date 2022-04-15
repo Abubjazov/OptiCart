@@ -29,7 +29,6 @@ export const productReducer = (
 				...state,
 				status: 'waiting',
 				products: action.payload,
-				error: null,
 			}
 
 		case ProductActionTypes.FETCH_PRODUCTS_ERROR:
