@@ -49,7 +49,10 @@
 			margin-bottom: 5px;
 
 			@media (max-width: 436px) {
+				margin-top: 2px;
 				text-align: center;
+				line-height: 21px;
+				font-size: 21px;
 			}
 		}
 
@@ -78,7 +81,7 @@
 			text-align: center;
 			margin: 0;
 			padding-top: 40px;
-			font-size: 25px;
+			font-size: 21px;
 			line-height: 21px;
 			font-weight: 300;
 		}

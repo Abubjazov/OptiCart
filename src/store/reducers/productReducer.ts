@@ -4,7 +4,7 @@ import {
 	ProductState,
 } from '../../interfaces'
 
-const initialState: ProductState = {
+export const initialState: ProductState = {
 	products: [],
 	currentProductId: null,
 	status: 'waiting',
@@ -29,7 +29,6 @@ export const productReducer = (
 				...state,
 				status: 'waiting',
 				products: action.payload,
-				error: null,
 			}
 
 		case ProductActionTypes.FETCH_PRODUCTS_ERROR:

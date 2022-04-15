@@ -27,7 +27,7 @@ exports[`Component: CartItem should render CartItem 1`] = `
         />
       </picture>
       <button
-        aria-label="Remove sneakers Paco from cart"
+        aria-label="Remove Paco from your cart"
       >
         Remove product
       </button>
