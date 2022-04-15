@@ -5,7 +5,7 @@ import {
 	CartState,
 } from '../../interfaces'
 
-const initialState: CartState = {
+export const initialState: CartState = {
 	cart: [],
 	currentItemId: null,
 	status: 'waiting',
@@ -25,7 +25,6 @@ export const cartReducer = (
 				...state,
 				status: 'waiting',
 				cart: action.payload,
-				error: null,
 			}
 
 		case CartActionTypes.FETCH_CART_ERROR:
@@ -69,7 +68,6 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-
 				cart: state.cart.filter(
 					(item: CartListItem) => item.id !== action.payload
 				),
@@ -118,7 +116,6 @@ export const cartReducer = (
 				...state,
 				status: 'checkouted',
 				cart: [],
-				error: null,
 			}
 
 		case CartActionTypes.CHECKOUT_CART_ERROR:
