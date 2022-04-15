@@ -2,6 +2,8 @@ import { CartActionTypes, CartListItem } from '../../interfaces'
 import { mockCartItems } from '../../mockData/mockData'
 import { initialState, cartReducer } from './cartReducer'
 
+let testData = [...mockCartItems]
+
 describe('Reducer: cartReducer', () => {
 	test('FETCH_CART: should change state', () => {
 		expect(
@@ -20,12 +22,12 @@ describe('Reducer: cartReducer', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.FETCH_CART_SUCCESS,
-				payload: mockCartItems,
+				payload: testData,
 			})
 		).toEqual({
 			...initialState,
 			status: 'waiting',
-			cart: mockCartItems,
+			cart: testData,
 		})
 	})
 
@@ -57,15 +59,17 @@ describe('Reducer: cartReducer', () => {
 	})
 
 	test('ADD_TO_CART_SUCCESS: should change state', () => {
+		testData[0].quantity += 1
+
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.ADD_TO_CART_SUCCESS,
-				payload: mockCartItems[0],
+				payload: testData[0],
 			})
 		).toEqual({
 			...initialState,
 			status: 'waiting',
-			cart: [...initialState.cart, mockCartItems[0]],
+			cart: [...initialState.cart, testData[0]],
 		})
 	})
 
@@ -86,7 +90,7 @@ describe('Reducer: cartReducer', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.UPDATE_CART_QUANTITY,
-				payload: { cartItemId: 1, quantity: 2 },
+				payload: { cartItemId: 1, quantity: 1 },
 			})
 		).toEqual({
 			...initialState,
@@ -100,14 +104,14 @@ describe('Reducer: cartReducer', () => {
 		expect(
 			cartReducer(initialState, {
 				type: CartActionTypes.UPDATE_CART_QUANTITY_SUCCESS,
-				payload: { cartItemId: 1, quantity: 2 },
+				payload: { cartItemId: 1, quantity: 1 },
 			})
 		).toEqual({
 			...initialState,
 			status: 'waiting',
 			cart: initialState.cart.map((item: CartListItem) => {
 				if (item.id === 1) {
-					item.quantity = 2
+					item.quantity = 1
 				}
 				return item
 			}),

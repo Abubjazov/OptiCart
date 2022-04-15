@@ -2,6 +2,8 @@ import { ProductActionTypes } from '../../interfaces'
 import { mockProducts } from '../../mockData/mockData'
 import { initialState, productReducer } from './productReducer'
 
+let testData = [...mockProducts]
+
 describe('Reducer: productReducer', () => {
 	test('FETCH_PRODUCTS: should change state', () => {
 		expect(
@@ -20,12 +22,12 @@ describe('Reducer: productReducer', () => {
 		expect(
 			productReducer(initialState, {
 				type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS,
-				payload: mockProducts,
+				payload: testData,
 			})
 		).toEqual({
 			...initialState,
 			status: 'waiting',
-			products: mockProducts,
+			products: testData,
 		})
 	})
 
