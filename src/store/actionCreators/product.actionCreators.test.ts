@@ -3,26 +3,26 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
 import { ProductActionTypes } from '../../interfaces'
-
-import { mockCartItems } from '../../mockData/mockData'
 import { fetchProducts } from './product.actionCreators'
+
+import { mockProducts } from '../../mockData/mockData'
 
 jest.mock('axios')
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
-describe('fetchCart', () => {
-	test('Success', async () => {
+describe('Action creator: fetchProducts', () => {
+	test('Fetching: Success', async () => {
 		axios.get.mockImplementationOnce(() =>
-			Promise.resolve({ data: { products: mockCartItems } })
+			Promise.resolve({ data: { products: mockProducts } })
 		)
 
 		const expectedActions = [
 			{ type: ProductActionTypes.FETCH_PRODUCTS },
 			{
 				type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS,
-				payload: mockCartItems,
+				payload: mockProducts,
 			},
 		]
 
@@ -33,7 +33,7 @@ describe('fetchCart', () => {
 		})
 	})
 
-	test('Error', async () => {
+	test('Fetching: Error', async () => {
 		const errorMessage = 'Network Error'
 
 		axios.get.mockImplementationOnce(() =>
