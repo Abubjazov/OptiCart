@@ -8,13 +8,14 @@ import { fetchProducts } from './product.actionCreators'
 import { mockProducts } from '../../mockData/mockData'
 
 jest.mock('axios')
+const mockedAxios = axios as jest.Mocked<typeof axios>
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
 describe('Action creator: fetchProducts', () => {
 	test('Fetching: Success', async () => {
-		axios.get.mockImplementationOnce(() =>
+		mockedAxios.get.mockImplementationOnce(() =>
 			Promise.resolve({ data: { products: mockProducts } })
 		)
 
@@ -36,7 +37,7 @@ describe('Action creator: fetchProducts', () => {
 	test('Fetching: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.get.mockImplementationOnce(() =>
+		mockedAxios.get.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 

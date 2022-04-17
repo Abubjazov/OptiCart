@@ -14,13 +14,14 @@ import {
 import { mockCartItems } from '../../mockData/mockData'
 
 jest.mock('axios')
+const mockedAxios = axios as jest.Mocked<typeof axios>
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
 describe('Action creator: fetchCart', () => {
 	test('Fetching: Success', async () => {
-		axios.get.mockImplementationOnce(() =>
+		mockedAxios.get.mockImplementationOnce(() =>
 			Promise.resolve({ data: { cart_items: mockCartItems } })
 		)
 
@@ -42,7 +43,7 @@ describe('Action creator: fetchCart', () => {
 	test('Fetching: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.get.mockImplementationOnce(() =>
+		mockedAxios.get.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 
@@ -66,7 +67,7 @@ describe('Action creator: fetchCart', () => {
 
 describe('Action creator: addToCart', () => {
 	test('Adding: Success', async () => {
-		axios.post.mockImplementationOnce(() =>
+		mockedAxios.post.mockImplementationOnce(() =>
 			Promise.resolve({ data: mockCartItems[0] })
 		)
 
@@ -88,7 +89,7 @@ describe('Action creator: addToCart', () => {
 	test('Adding: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.post.mockImplementationOnce(() =>
+		mockedAxios.post.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 
@@ -112,7 +113,7 @@ describe('Action creator: addToCart', () => {
 
 describe('Action creator: removeFromCart', () => {
 	test('Removing: Success', async () => {
-		axios.delete.mockImplementationOnce(() =>
+		mockedAxios.delete.mockImplementationOnce(() =>
 			Promise.resolve({ data: { id: 1, status: 'ok' } })
 		)
 
@@ -134,7 +135,7 @@ describe('Action creator: removeFromCart', () => {
 	test('Removing: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.delete.mockImplementationOnce(() =>
+		mockedAxios.delete.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 
@@ -158,7 +159,7 @@ describe('Action creator: removeFromCart', () => {
 
 describe('Action creator: updateCartQuantity', () => {
 	test('Quantity updating: Success', async () => {
-		axios.put.mockImplementationOnce(() =>
+		mockedAxios.put.mockImplementationOnce(() =>
 			Promise.resolve({ data: mockCartItems[0] })
 		)
 
@@ -183,7 +184,7 @@ describe('Action creator: updateCartQuantity', () => {
 	test('Quantity updating: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.put.mockImplementationOnce(() =>
+		mockedAxios.put.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 
@@ -210,7 +211,7 @@ describe('Action creator: updateCartQuantity', () => {
 
 describe('Action creator: checkoutCart', () => {
 	test('Checkouting: Success', async () => {
-		axios.post.mockImplementationOnce(() => Promise.resolve())
+		mockedAxios.post.mockImplementationOnce(() => Promise.resolve())
 
 		const expectedActions = [
 			{ type: CartActionTypes.CHECKOUT_CART },
@@ -229,7 +230,7 @@ describe('Action creator: checkoutCart', () => {
 	test('Checkouting: Error', async () => {
 		const errorMessage = 'Network Error'
 
-		axios.post.mockImplementationOnce(() =>
+		mockedAxios.post.mockImplementationOnce(() =>
 			Promise.reject(new Error(errorMessage))
 		)
 
