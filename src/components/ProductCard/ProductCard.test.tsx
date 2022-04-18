@@ -53,7 +53,7 @@ describe('Component: ProductCard', () => {
 		const middlewares = [thunk]
 		const mockStore = configureStore(middlewares)
 
-		let store = mockStore({
+		const store = mockStore({
 			cart: {
 				cart: [],
 				status: 'waiting',
