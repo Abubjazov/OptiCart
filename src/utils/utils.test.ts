@@ -10,6 +10,6 @@ describe('Function: utils/fullPrice()', () => {
 
 describe('Function: utils/getTotal()', () => {
 	test('getTotal() / Positive: calculates the total price of all Cart and returns a string of the format "dd,dd"', () => {
-		expect(getTotal(mockCartItems)).toBe('71.13')
+		expect(getTotal(mockCartItems)).toBe('87.76')
 	})
 })

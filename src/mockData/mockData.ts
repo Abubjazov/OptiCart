@@ -25,7 +25,7 @@ export const mockCartItems: CartListItem[] = [
 		picture_small: 'https://i.ibb.co/tZKmKRX/5-180-180.webp',
 		description: 'Rem ut excepturi quidem nesciunt.',
 		price: 16.63,
-		quantity: 1,
+		quantity: 2,
 	},
 ]
 

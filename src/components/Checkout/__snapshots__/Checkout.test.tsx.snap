@@ -64,10 +64,10 @@ exports[`Component: Checkout should render Checkout with mockData store state 1`
     class="checkout"
   >
     <h2
-      aria-label="Final price of the entire order is 71.13"
+      aria-label="Final price of the entire order is 87.76"
       tabindex="0"
     >
-      Total: 71.13 $
+      Total: 87.76 $
     </h2>
     <button
       aria-label="Checkout order"

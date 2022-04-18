@@ -1,6 +1,181 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: CartItem should render CartItem 1`] = `
+exports[`Component: CartItem should render CartItem with cart.status = "loading" & cart.currentItemId = 1 1`] = `
+<DocumentFragment>
+  <article
+    aria-label="Sneakers Paco in your cart, unit price 54.5 $, quantity 1"
+    class="cartitem"
+    tabindex="0"
+  >
+    <header>
+      <picture>
+        <source
+          media="(min-width: 901px)"
+          srcset="https://i.ibb.co/DrymCMM/4-250-250.webp"
+        />
+        <source
+          media="(min-width: 651px)"
+          srcset="https://i.ibb.co/84RrCYH/4-400-400.webp"
+        />
+        <source
+          media="(max-width: 650px)"
+          srcset="https://i.ibb.co/LSd3drp/4-360-360.webp"
+        />
+        <img
+          alt="Paco"
+          src="https://i.ibb.co/DrymCMM/4-250-250.webp"
+        />
+      </picture>
+      <button
+        aria-label="Remove Paco from your cart"
+      >
+        <svg
+          class="small-spinner"
+          height="20"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 100 100"
+          width="20"
+        >
+          <path
+            d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+            fill="none"
+            stroke="#fff"
+            stroke-dasharray="42.76482137044271 42.76482137044271"
+            stroke-linecap="round"
+            stroke-width="8"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              dur="1s"
+              keyTimes="0;1"
+              repeatCount="indefinite"
+              values="0;256.58892822265625"
+            />
+          </path>
+        </svg>
+      </button>
+    </header>
+    <section
+      class="cartitem-descriptor"
+    >
+      <h2>
+        Paco
+      </h2>
+      <p>
+        Ab odit numquam consectetur aut.
+      </p>
+    </section>
+    <footer>
+      <div
+        class="quantity"
+      >
+        <button
+          aria-label="Reduce the quantity of Paco by one"
+          class="quantity-minus"
+        >
+          <svg
+            class="small-spinner"
+            height="20"
+            preserveAspectRatio="xMidYMid"
+            viewBox="0 0 100 100"
+            width="20"
+          >
+            <path
+              d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+              fill="none"
+              stroke="#fff"
+              stroke-dasharray="42.76482137044271 42.76482137044271"
+              stroke-linecap="round"
+              stroke-width="8"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                dur="1s"
+                keyTimes="0;1"
+                repeatCount="indefinite"
+                values="0;256.58892822265625"
+              />
+            </path>
+          </svg>
+        </button>
+        <h3
+          aria-label="Quantity of product Paco is 1"
+          class="quantity-value"
+          tabindex="0"
+        >
+          1
+        </h3>
+        <button
+          aria-label="Increase the quantity of Paco by one"
+          class="quantity-plus"
+        >
+          <svg
+            class="small-spinner"
+            height="20"
+            preserveAspectRatio="xMidYMid"
+            viewBox="0 0 100 100"
+            width="20"
+          >
+            <path
+              d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+              fill="none"
+              stroke="#fff"
+              stroke-dasharray="42.76482137044271 42.76482137044271"
+              stroke-linecap="round"
+              stroke-width="8"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                dur="1s"
+                keyTimes="0;1"
+                repeatCount="indefinite"
+                values="0;256.58892822265625"
+              />
+            </path>
+          </svg>
+        </button>
+      </div>
+      <h3
+        aria-label="Sneakers Paco unit price is 54.5 $"
+        class="price"
+        tabindex="0"
+      >
+        54.5 $
+      </h3>
+      <div
+        class="full-price"
+      >
+        <svg
+          class="small-spinner"
+          height="45"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 100 100"
+          width="45"
+        >
+          <path
+            d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+            fill="none"
+            stroke="#fff"
+            stroke-dasharray="42.76482137044271 42.76482137044271"
+            stroke-linecap="round"
+            stroke-width="3"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              dur="1s"
+              keyTimes="0;1"
+              repeatCount="indefinite"
+              values="0;256.58892822265625"
+            />
+          </path>
+        </svg>
+      </div>
+    </footer>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`Component: CartItem should render CartItem with cart.status = "loading" & cart.currentItemId = null 1`] = `
 <DocumentFragment>
   <article
     aria-label="Sneakers Paco in your cart, unit price 54.5 $, quantity 1"
