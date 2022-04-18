@@ -3,13 +3,14 @@ import userEvent from '@testing-library/user-event'
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
+
 import { CartActionTypes } from '../../interfaces'
 
 import { mockCartItems } from '../../mockData/mockData'
 
 import { Checkout } from './Checkout'
 
-const mockStore = configureStore([])
+const mockStore = configureStore()
 
 describe('Component: Checkout', () => {
 	test('should render Checkout with cart.status = "loading"', () => {
