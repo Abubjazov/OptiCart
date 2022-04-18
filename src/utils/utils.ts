@@ -14,3 +14,25 @@ export const getTotal = (cart: CartListItem[]): string => {
 			.toFixed(2)
 	)
 }
+
+export const removeFromCartSuccess = (
+	cart: CartListItem[],
+	payload: number
+) => {
+	return cart.filter((item: CartListItem) => item.id !== payload)
+}
+
+export const updateCartQuantitySuccess = (
+	cart: CartListItem[],
+	payload: {
+		cartItemId: number
+		quantity: number
+	}
+) => {
+	return cart.map((item: CartListItem) => {
+		if (item.id === payload.cartItemId) {
+			item.quantity = payload.quantity
+		}
+		return item
+	})
+}

@@ -1,9 +1,8 @@
+import { CartAction, CartActionTypes, CartState } from '../../interfaces'
 import {
-	CartAction,
-	CartActionTypes,
-	CartListItem,
-	CartState,
-} from '../../interfaces'
+	removeFromCartSuccess,
+	updateCartQuantitySuccess,
+} from '../../utils/utils'
 
 export const initialState: CartState = {
 	cart: [],
@@ -68,9 +67,7 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-				cart: state.cart.filter(
-					(item: CartListItem) => item.id !== action.payload
-				),
+				cart: removeFromCartSuccess(state.cart, action.payload),
 			}
 
 		case CartActionTypes.REMOVE_FROM_CART_ERROR:
@@ -92,13 +89,7 @@ export const cartReducer = (
 			return {
 				...state,
 				status: 'waiting',
-
-				cart: state.cart.map((item: CartListItem) => {
-					if (item.id === action.payload.cartItemId) {
-						item.quantity = action.payload.quantity
-					}
-					return item
-				}),
+				cart: updateCartQuantitySuccess(state.cart, action.payload),
 			}
 
 		case CartActionTypes.UPDATE_CART_QUANTITY_ERROR:
