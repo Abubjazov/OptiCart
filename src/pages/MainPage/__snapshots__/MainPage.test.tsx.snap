@@ -1,6 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: MainPage should render MainPage 1`] = `
+exports[`Component: MainPage should render MainPage with Error 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="error-message"
+      role="alert"
+    >
+      <p
+        tabindex="0"
+      >
+        Test error message
+      </p>
+      <p
+        tabindex="0"
+      />
+      <a
+        href="/optiCart/"
+      >
+        Back to main page
+      </a>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Component: MainPage should render MainPage with Spinner 1`] = `
 <DocumentFragment>
   <main
     class="main-page"
@@ -32,6 +57,144 @@ exports[`Component: MainPage should render MainPage 1`] = `
           />
         </path>
       </svg>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Component: MainPage should render MainPage with products list 1`] = `
+<DocumentFragment>
+  <main
+    class="main-page"
+  >
+    <p
+      role="alert"
+      style="display: block; position: fixed; left: 100px; top: 0px; overflow: hidden; height: 0px; opacity: 1;"
+    >
+      You are on the main page
+    </p>
+    <div
+      class="container"
+    >
+      <article
+        aria-label="sneakers Paco, unit price 54.5 $"
+        class="product"
+        tabindex="0"
+      >
+        <header>
+          <img
+            alt="Paco"
+            height="200"
+            src="https://i.ibb.co/84RrCYH/4-400-400.webp"
+            width="200"
+          />
+        </header>
+        <section
+          class="product-descriptor"
+        >
+          <h2>
+            Paco
+          </h2>
+          <p>
+            Ab odit numquam consectetur aut.
+          </p>
+        </section>
+        <footer>
+          54.5 $
+          <button
+            aria-label="Add to cart Paco"
+          >
+            <svg
+              class="small-spinner"
+              height="20"
+              preserveAspectRatio="xMidYMid"
+              viewBox="0 0 100 100"
+              width="20"
+            >
+              <path
+                d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+                fill="none"
+                stroke="#fff"
+                stroke-dasharray="42.76482137044271 42.76482137044271"
+                stroke-linecap="round"
+                stroke-width="8"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  dur="1s"
+                  keyTimes="0;1"
+                  repeatCount="indefinite"
+                  values="0;256.58892822265625"
+                />
+              </path>
+            </svg>
+          </button>
+        </footer>
+      </article>
+      <article
+        aria-label="sneakers Indigo, unit price 16.63 $"
+        class="product"
+        tabindex="0"
+      >
+        <header>
+          <img
+            alt="Indigo"
+            height="200"
+            src="https://i.ibb.co/FBTQYHv/5-400-400.webp"
+            width="200"
+          />
+        </header>
+        <section
+          class="product-descriptor"
+        >
+          <h2>
+            Indigo
+          </h2>
+          <p>
+            Rem ut excepturi quidem nesciunt.
+          </p>
+        </section>
+        <footer>
+          16.63 $
+          <button
+            aria-label="Add to cart Indigo"
+          >
+            Add to cart
+          </button>
+        </footer>
+      </article>
+      <article
+        aria-label="sneakers Nimiro, unit price 22.85 $"
+        class="product"
+        tabindex="0"
+      >
+        <header>
+          <img
+            alt="Nimiro"
+            height="200"
+            src="https://i.ibb.co/wwjGRcp/6-400-400.webp"
+            width="200"
+          />
+        </header>
+        <section
+          class="product-descriptor"
+        >
+          <h2>
+            Nimiro
+          </h2>
+          <p>
+            Quasi cupiditate dolorum nulla tempore.
+          </p>
+        </section>
+        <footer>
+          22.85 $
+          <button
+            aria-label="Add to cart Nimiro"
+          >
+            Add to cart
+          </button>
+        </footer>
+      </article>
     </div>
   </main>
 </DocumentFragment>

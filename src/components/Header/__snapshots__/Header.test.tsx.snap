@@ -38,3 +38,86 @@ exports[`Component: Header should render Header 1`] = `
   </header>
 </DocumentFragment>
 `;
+
+exports[`Component: Header should render Header with Active Cart 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <h1>
+      sneakers. 
+      <span>
+        [ ]
+      </span>
+    </h1>
+    <nav
+      class="header-menu"
+    >
+      <ul>
+        <li>
+          <a
+            aria-label="Go to main page"
+            class=""
+            href="/optiCart/"
+            style=""
+          >
+            Main
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current="page"
+            aria-label="Go to cart page"
+            class="active"
+            href="/optiCart/cart"
+            style="color: rgb(59, 128, 121);"
+          >
+            Cart
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`Component: Header should render Header with Active Main 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <h1>
+      sneakers. 
+      <span>
+        [ ]
+      </span>
+    </h1>
+    <nav
+      class="header-menu"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            aria-label="Go to main page"
+            class="active"
+            href="/optiCart/"
+            style="color: rgb(59, 128, 121);"
+          >
+            Main
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Go to cart page"
+            class=""
+            href="/optiCart/cart"
+          >
+            Cart
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
