@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 
 import { CartAction, CartActionTypes } from '../../interfaces'
 
-export const fetchCart = () => {
+export const fetchCart = (): any => {
 	return async (dispatch: Dispatch<CartAction>) => {
 		try {
 			dispatch({ type: CartActionTypes.FETCH_CART })
@@ -25,7 +25,7 @@ export const fetchCart = () => {
 	}
 }
 
-export const addToCart = (product_id: number) => {
+export const addToCart = (product_id: number): any => {
 	return async (dispatch: Dispatch<CartAction>) => {
 		try {
 			dispatch({ type: CartActionTypes.ADD_TO_CART, payload: product_id })
@@ -48,7 +48,7 @@ export const addToCart = (product_id: number) => {
 	}
 }
 
-export const removeFromCart = (product_id: number) => {
+export const removeFromCart = (product_id: number): any => {
 	return async (dispatch: Dispatch<CartAction>) => {
 		try {
 			dispatch({ type: CartActionTypes.REMOVE_FROM_CART, payload: product_id })
@@ -70,7 +70,10 @@ export const removeFromCart = (product_id: number) => {
 	}
 }
 
-export const updateCartQuantity = (cartItemId: number, quantity: number) => {
+export const updateCartQuantity = (
+	cartItemId: number,
+	quantity: number
+): any => {
 	return async (dispatch: Dispatch<CartAction>) => {
 		try {
 			dispatch({
@@ -96,7 +99,7 @@ export const updateCartQuantity = (cartItemId: number, quantity: number) => {
 	}
 }
 
-export const checkoutCart = () => {
+export const checkoutCart = (): any => {
 	return async (dispatch: Dispatch<CartAction>) => {
 		try {
 			dispatch({ type: CartActionTypes.CHECKOUT_CART })
