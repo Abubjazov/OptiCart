@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 
 import { ProductAction, ProductActionTypes } from '../../interfaces'
 
-export const fetchProducts = () => {
+export const fetchProducts = (): any => {
 	return async (dispatch: Dispatch<ProductAction>) => {
 		try {
 			dispatch({ type: ProductActionTypes.FETCH_PRODUCTS })
