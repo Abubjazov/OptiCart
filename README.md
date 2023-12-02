@@ -15,7 +15,7 @@ Github Pages: https://abubjazov.github.io/optiCart/
 
 ![LANDING](docs/cart.jpg)
 
-## Test coverage
+## :fire: Test coverage
 
 ![TEST_COVERAGE](docs/test_coverage_1.jpg)
 <br>
