@@ -1,6 +1,6 @@
 # Sneakers - Online Shopping cart.
 
-Simple online Shopping application based on React, Redux and Typescript. :fire:
+Simple online Shopping application based on React, Redux and Typescript.
 
 **Demo:**
 Github Pages: https://abubjazov.github.io/optiCart/
@@ -35,7 +35,7 @@ Github Pages: https://abubjazov.github.io/optiCart/
 **Cart page Mobile**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_mobile_cart.jpg)
 
-## Technology Stack
+## :hammer: Technology Stack
 
 ```
 React
@@ -48,24 +48,24 @@ Nanoid
 SASS
 ```
 
-## Components Structure
+## :clipboard: Components Structure
 
 ![COMPONENTS_TREE](docs/components_tree.svg)
 
-## Quick Start
+## :rocket: Quick Start
 
 ```
 npm install
 npm start
 ```
 
-## Running of tests
+## :fire: Running of tests
 
 ```
 npm run test
 ```
 
-## Deployment
+## :gem: Deployment
 
 ```
 npm run deploy
