@@ -1,6 +1,6 @@
 # Sneakers - Online Shopping cart.
 
-Simple online Shopping application based on React, Redux and Typescript.
+Simple online Shopping application based on React, Redux and Typescript. :fire:
 
 **Demo:**
 Github Pages: https://abubjazov.github.io/optiCart/
