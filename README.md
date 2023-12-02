@@ -21,7 +21,7 @@ Github Pages: https://abubjazov.github.io/optiCart/
 <br>
 ![TEST_COVERAGE](docs/test_coverage_2.jpg)
 
-## Lighthouse Reports
+## :white_check_mark: Lighthouse Reports
 
 **Main page Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_main.jpg)
